@@ -1,0 +1,53 @@
+.navbarfont{
+    font-size: 19px;
+    line-height: 50px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 400;
+}
+
+.cardfont{
+    font-size: 19px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;}
+
+.navbartataletak{
+    padding-left: 30px;
+}
+
+.itemhover::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+.itemhover:hover::after{
+    width: 100%;
+    transition: width .3s;
+}﻿
+
+ header .carousel-inner item{
+    height: 100vh;
+
+ }
+
+ .carousel-caption{
+     padding-bottom: 300px;
+
+
+     font-family: 'Coiny', cursive;
+     font-weight: 900;
+ }
+
+ .carousel-caption h2{
+     font-size: 50px;
+     color: red;
+     text-transform: uppercase;
+ }
+
+.carousel-caption h3{
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+}
