@@ -120,9 +120,10 @@
 @endsection
 
 @section('script')
+    <script src="{{ asset('js/Master/kelas.js') }}"></script>
 <script type="text/javascript">
 
-    getDataKelas();
+    getDataKelas1('{{ route('getDataKelas') }}');
 
     function showDetail(id, nama) {
         $('#txtOldIdKelas').val(id);

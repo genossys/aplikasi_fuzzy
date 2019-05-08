@@ -1,11 +1,11 @@
-function getDataKelas1() {
+function getDataKelas1(route) {
     $('#example2').DataTable({
         destroy     : true,
         lengthMenu: [ [5, 10, 15, -1], [5, 10, 15, "All"] ],
         autowidth   : true,
         serverSide  : true,
         processing  : false,
-        ajax        : '{{route('getDataKelas')}}',
+        ajax        : route,
         columns     : [
             {data : 'DT_RowIndex', name : 'DT_RowIndex', searchable : false, sortable : false},
             {data :'idKelas', name   : 'idKelas'},
