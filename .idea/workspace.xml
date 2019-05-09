@@ -14,8 +14,18 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="458">
               <caret line="56" column="17" lean-forward="false" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="121">
+              <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+=======
+            <state relative-caret-position="441">
+              <caret line="53" column="28" lean-forward="true" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+>>>>>>> c007fb8cecc643199e2910b057b38a5f32ccb551
+>>>>>>> e7ae2d1e05112adff67451d057404ab5b5c3ef42
               <folding>
                 <element signature="e#7#389#0#PHP" expanded="true" />
               </folding>
@@ -433,22 +443,45 @@
       <workItem from="1557377040624" duration="514000" />
       <workItem from="1557377598394" duration="17000" />
       <workItem from="1557377765182" duration="168000" />
+<<<<<<< HEAD
+      <workItem from="1557378187212" duration="13662000" />
+=======
       <workItem from="1557378187212" duration="13149000" />
+<<<<<<< HEAD
       <workItem from="1557392786349" duration="649000" />
+=======
+      <workItem from="1557392786349" duration="127000" />
+>>>>>>> c007fb8cecc643199e2910b057b38a5f32ccb551
+>>>>>>> e7ae2d1e05112adff67451d057404ab5b5c3ef42
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="131898000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="131762000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="131376000" />
+>>>>>>> e7ae2d1e05112adff67451d057404ab5b5c3ef42
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
+>>>>>>> c007fb8cecc643199e2910b057b38a5f32ccb551
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13842663" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23913044" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.310559" sideWeight="0.49707174" order="8" side_tool="false" content_ui="tabs" />
+=======
+>>>>>>> c007fb8cecc643199e2910b057b38a5f32ccb551
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -840,8 +873,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="458">
           <caret line="56" column="17" lean-forward="false" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="121">
+          <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+=======
+        <state relative-caret-position="441">
+          <caret line="53" column="28" lean-forward="true" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+>>>>>>> c007fb8cecc643199e2910b057b38a5f32ccb551
+>>>>>>> e7ae2d1e05112adff67451d057404ab5b5c3ef42
           <folding>
             <element signature="e#7#389#0#PHP" expanded="true" />
           </folding>

@@ -54,4 +54,8 @@ Route::get('/siswabaru', function () {
     return view('/admin/master/tambahsiswa');
 })->name('siswabaru');
 
+<<<<<<< HEAD
 tes dancuk i weee
+=======
+tesasu
+>>>>>>> e7ae2d1e05112adff67451d057404ab5b5c3ef42
