@@ -6,4 +6,5 @@ function getListkelas1(route) {
             $('#cmbKelas').append('<option>'+element.idKelas+'</option>')
         });
     });
+    alert('s');
 }
