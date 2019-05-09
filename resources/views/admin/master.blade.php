@@ -39,10 +39,10 @@
     <![endif]-->
 
     <!-- Google Font -->
-<<<<<<< HEAD
     {{--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">--}}
 
     {{--<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">--}}
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.dataTables.min.css') }}">
 
 
