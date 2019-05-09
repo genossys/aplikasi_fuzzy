@@ -41,10 +41,7 @@
     <!-- Google Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-    {{--<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">--}}
     <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.dataTables.min.css') }}">
-
 
 
     <!-- Styles -->
@@ -79,14 +76,14 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="{{ asset ('/adminlte/img/user2-160x160.jpg') }}" class="user-image"
+                            <img src="{{ asset ('/adminlte/img/account-circle-512.png') }}" class="user-image"
                                  alt="User Image">
                             <span class="hidden-xs">Nama Siswa</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="{{ asset ('/adminlte/img/user2-160x160.jpg') }}" class="img-circle"
+                                <img src="{{ asset ('/adminlte/img/account-circle-512.png') }}" class="img-circle"
                                      alt="User Image">
 
                                 <p>
@@ -136,7 +133,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="{{ asset ('/adminlte/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                    <img src="{{ asset ('/adminlte/img/account-circle-512.png') }}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
                     <p>Nama Siswa</p>
@@ -159,7 +156,33 @@
                     <ul class="treeview-menu">
                         <li><a href="{{ route('dataKelas') }}"><i class="fa fa-home"></i> Data Kelas</a></li>
                         <li><a href="{{ route('dataSiswa') }}"><i class="fa fa-address-book"></i> Data Siswa</a></li>
-                        <li><a href="/dataperusahaan"><i class="fa fa-industry"></i> Data Tempat Magang</a></li>
+                        <li><a href="{{ route('dataPerusahaan')}}"><i class="fa fa-industry"></i> Data Tempat Magang</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-pencil"></i> <span>Input Data</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-book"></i> Input Nilai Siswa</a></li>
+                        <li><a href="#"><i class="fa fa-info"></i> Input Requirment Magang</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-line-chart"></i> <span>Laporan</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-universal-access"></i> Laporan Data Siswa</a></li>
+                        <li><a href="#"><i class="fa fa-info"></i> Laporan Magang</a></li>
                     </ul>
                 </li>
 
@@ -216,11 +239,7 @@
 <!-- bootstrap datepicker -->
 <script src="{{ asset('/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
 
-
 <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('js/handlebars.js') }}"></script>
-
-
 <script>
     $(document).ready(function () {
         $('.sidebar-menu').tree()
@@ -244,12 +263,44 @@
         })
 
     })
-    
-    function a() {
-        
-    }
 </script>
 
+
+<script>
+    //Java script untuk file input
+    $(document).ready(function () {
+        function bs_input_file() {
+            $(".input-file").before(
+                function () {
+                    if (!$(this).prev().hasClass('input-ghost')) {
+                        var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0'>");
+                        element.attr("name", $(this).attr("name"));
+                        element.change(function () {
+                            element.next(element).find('input').val((element.val()).split('\\').pop());
+                        });
+                        $(this).find("button.btn-choose").click(function () {
+                            element.click();
+                        });
+                        $(this).find("button.btn-reset").click(function () {
+                            element.val(null);
+                            $(this).parents(".input-file").find('input').val('');
+                        });
+                        $(this).find('input').css("cursor", "pointer");
+                        $(this).find('input').mousedown(function () {
+                            $(this).parents('.input-file').prev().click();
+                            return false;
+                        });
+                        return element;
+                    }
+                }
+            );
+        }
+
+        $(function () {
+            bs_input_file();
+        });
+    });
+</script>
 @yield('script')
 </body>
 </html>
