@@ -53,7 +53,7 @@
 </head>
 <body>
 
-<div class="wrapper btn">
+<div class="wrapper">
 
     <header class="main-header">
         <!-- Logo -->
@@ -245,11 +245,7 @@
 
     })
 </script>
-<<<<<<< HEAD
-hhahasuuuuuu
-=======
-hhaha dancuk
->>>>>>> 9e9c688184ff5a8a8b4ac27b71c86c7519598ecb
+
 @yield('script')
 </body>
 </html>
