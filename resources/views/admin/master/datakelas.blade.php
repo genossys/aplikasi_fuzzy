@@ -4,7 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Data Kelas
+            Form Data Kelas
         </h1>
 
     </section>
@@ -61,6 +61,7 @@
                         <h4 class="modal-title">Form Tambah Data Kelas</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
+                    <form  action="{{route('insertDataKelas')}}" method="POST" id="formSimpanSiswa">
                     {{ csrf_field() }}
                     <div class="modal-body">
                         <div class="alert alert-danger" style="display:none"></div>
@@ -73,12 +74,12 @@
                             <label>Nama Kelas</label>
                             <input type="text" class="form-control" placeholder="Nama Kelas" id="txtNamaKelas" name="txtNamaKelas">
                         </div>
-                        <button id="btnSimpan" class="btn btn-primary" onclick="insertDataSiswa()">Simpan</button>
+                        <button id="btnSimpan" class="btn btn-primary">Simpan</button>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
-
+                    </form>
                 </div>
             </div>
         </div>
@@ -92,6 +93,7 @@
                         <h4 class="modal-title">Form Edit Data Kelas</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
+                    <form type="POST">
                     {{ csrf_field() }}
                     <div class="modal-body">
                         <div class="alert alert-danger" style="display:none"></div>
@@ -112,7 +114,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
-
+                    </form>
                 </div>
             </div>
         </div>
@@ -121,14 +123,11 @@
 @endsection
 
 @section('script')
+    <script>
+        var urlkelas = '{{route('getDataKelas')}}';
+    </script>
     <script src="{{ asset('js/Master/kelas.js') }}"></script>
-<script type="text/javascript">
-
-    getDataKelas('{{ route('getDataKelas') }}');
-    test2();
-
-
-
-
-</script>
+    <script type="text/javascript">
+        getDataKelas();
+    </script>
 @endsection

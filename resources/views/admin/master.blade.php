@@ -158,7 +158,7 @@
                     <ul class="treeview-menu">
                         <li><a href="{{ route('dataKelas') }}"><i class="fa fa-home"></i> Data Kelas</a></li>
                         <li><a href="{{ route('dataSiswa') }}"><i class="fa fa-address-book"></i> Data Siswa</a></li>
-                        <li><a href="{{ route('dataPerusahaan')}}"><i class="fa fa-industry"></i> Data Tempat Magang</a></li>
+                        <li><a href=""><i class="fa fa-industry"></i> Data Tempat Magang</a></li>
                     </ul>
                 </li>
 
