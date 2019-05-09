@@ -15,25 +15,23 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <a href="{{route('dataSiswa')}}" class="btn btn-danger"><i class="fa fa-arrow-circle-left"></i></a>
+                <a href="/datasiswa" class="btn btn-danger"><i class="fa fa-arrow-circle-left"></i></a>
 
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                             title="Collapse">
                         <i class="fa fa-minus"></i></button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip"
-                            title="Remove">
-                        <i class="fa fa-times"></i></button>
+
                 </div>
             </div>
             <div class="box-body">
-                <div class="alert alert-danger" style="display:none"></div>
-                <div class="alert alert-success" style="display:none"></div>
+
+                <form method="post" action="" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label>NIS</label>
-                                <input type="text" class="form-control" placeholder="Masukan NIS" id="txtNis" name="txtNis">
+                                <input type="text" name="nis" id="nis" class="form-control" placeholder="Masukan NIS">
                             </div>
                         </div>
                     </div>
@@ -42,7 +40,8 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Nama Siswa</label>
-                                <input type="text" class="form-control" placeholder="Masukan Nama Siswa" id="txtNamaSiswa" name="txtNamaSiswa">
+                                <input type="text" name="namaSiswa" id="namaSiswa" class="form-control"
+                                       placeholder="Masukan Nama Siswa">
                             </div>
                         </div>
                     </div>
@@ -50,9 +49,9 @@
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label>Jenis Kelamin</label>
-                                <select class="form-control" id="cmbJenis" name="cmbJenis">
-                                    <option value="L">Laki-laki</option>
-                                    <option value="P">Perempuan</option>
+                                <select class="form-control" name="jenisKelaminSiswa" id="jenisKelaminSiswa">
+                                    <option value="Laki-laki">Laki-laki</option>
+                                    <option value="Perempuan">Perempuan</option>
                                 </select>
                             </div>
                         </div>
@@ -65,7 +64,8 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="datepicker" name="datepicker">
+                                    <input type="text" class="form-control pull-right" id="datepicker"
+                                           name="lahirSiswa">
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,8 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Alamat</label>
-                                <textarea class="form-control" rows="3" placeholder="Enter ..." id="txtAlamat" name="txtAlamat"></textarea>
+                                <textarea class="form-control" rows="3" name="alamatSiswa" id="alamatSiswa"
+                                          placeholder="Enter ..."></textarea>
                             </div>
                         </div>
                     </div>
@@ -85,7 +86,10 @@
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label>Kelas</label>
-                                <select class="form-control" id="cmbKelas">
+                                <select class="form-control" name="kelasSiswa" id="kelasSiswa">
+                                    <option>X</option>
+                                    <option>Xi</option>
+                                    <option>Xii</option>
                                 </select>
                             </div>
                         </div>
@@ -93,12 +97,42 @@
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label>Nama Ortu</label>
-                                <input type="text" class="form-control" placeholder="Masukan Nama Ortu / Wali" id="txtWali" name="txtWali">
+                                <input type="text" name="ortuSiswa" id="ortuSiswa" class="form-control"
+                                       placeholder="Masukan Nama Ortu / Wali">
                             </div>
                         </div>
                     </div>
 
-                    <button class="btn btn-primary btn-lg" onclick="insertSiswa()">Simpan</button>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label>Nomor Hp</label>
+                                    <input type="text" class="form-control" name="telpSiswa" id="telpSiswa"
+                                           placeholder="Masukan no. hp">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <label>Foto Siswa</label>
+                                <div class="form-group">
+                                    <div class="input-group input-file" name="fotosiswa">
+			<span class="input-group-btn">
+        		<button class="btn btn-default btn-choose" type="button">Pilih</button>
+    		</span>
+                                        <input type="text" class="form-control" name="fotoSiswa" id="fotoSiswa"
+                                               placeholder='Pilih Foto Siswa'/>
+                                        <span class="input-group-btn">
+       			 <button class="btn btn-warning btn-reset" type="button">Reset</button>
+    		</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary btn-lg">Simpan</button>
+                </form>
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
@@ -111,77 +145,7 @@
     </section>
     <!-- /.content -->
 
-@endsection
 
-@section('script')
 
-    <script>
 
-        getListkelas();
-        function getListkelas() {
-            $.get('{{route('getListKelas')}}', function (data) {
-                    console.log(data);
-                $('#cmbKelas').empty();
-                $.each(data, function (index, element) {
-                    $('#cmbKelas').append('<option>'+element.idKelas+'</option>')
-                });
-            });
-        }
-
-        function clear() {
-                $('#txtNis').val(''),
-                $('#txtNamaSiswa').val(''),
-                $('#datepicker').val(''),
-                $('#txtAlamat').val(''),
-                $('#txtWali').val('')
-        }
-        function insertSiswa() {
-            $('#datepicker').datepicker({
-                format: 'yyyy-mm-dd'
-            });
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-
-            $.ajax({
-                type: 'POST',
-                url: '{{ route('insertDataSiswa') }}',
-                dataType: 'JSON',
-                data: {
-                    _token 		    : $('input[name=_token]').val(),
-                    nis 		    : $('#txtNis').val(),
-                    namaSiswa   	: $('#txtNamaSiswa').val(),
-                    jenisKelamin   	: $('#cmbJenis').val(),
-                    tanggalLahir   	: $('#datepicker').val(),
-                    alamat         	: $('#txtAlamat').val(),
-                    idKelas         	: $('#cmbKelas').val(),
-                    namaOrtu         	: $('#txtWali').val()
-
-                },
-                success: function(response){
-                    console.log(response);
-                    if (response.valid){
-                        $('.alert-danger').hide();
-                        $('.alert-success').hide();
-                        $('.alert-success').show().html('<p> Berhasil Menambahkan NIS '+response.sukses['nis']+'</p>');
-                        clear()
-                    }else{
-                        $('.alert-danger').hide();
-                        $('.alert-success').hide();
-                        $.each(response.errors, function(key, value){
-                            $('.alert-danger').show().append('<p>'+value+'</p>');
-                        });
-                    }
-                },
-                error: function(xhr, textStatus, errorThrown){
-                    alert(errorThrown);
-                    console.log(errorThrown);
-
-                }
-
-            });
-        }
-    </script>
 @endsection
