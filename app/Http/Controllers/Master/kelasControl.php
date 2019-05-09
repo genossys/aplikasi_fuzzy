@@ -11,18 +11,28 @@ use Yajra\DataTables\DataTables;
 class kelasControl extends Controller
 {
     //
+    private $data;
 
     public function index(){
 
         return view('admin.master.datakelas');
     }
 
+
+
     public function getData(){
-        $datakelas = kelas::query()
+
+        $this->data = kelas::query()
             ->select('idKelas','namaKelas')
             ->orderBy('idKelas', 'ASC')
             ->get();
-        return DataTables::of($datakelas)
+
+
+        return DataTables::of($this->data)
+            ->addColumn('action', function (){
+                return '<a class="btn-sm btn-warning" id="btn-edit" href="#">Edit<a/> &nbsp; 
+                        <a class="btn-sm btn-danger" href="#">Delete</a>';
+            })
             ->addIndexColumn()
             ->make(true);
     }
