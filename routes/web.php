@@ -54,4 +54,4 @@ Route::get('/siswabaru', function () {
     return view('/admin/master/tambahsiswa');
 })->name('siswabaru');
 
-tesasu
+

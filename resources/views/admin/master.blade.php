@@ -245,7 +245,7 @@
 
     })
 </script>
-
+hhaha
 @yield('script')
 </body>
 </html>
