@@ -7,19 +7,19 @@ function getDataKelas(route) {
         processing  : false,
         ajax        : route,
         columns     : [
-            {data : 'DT_RowIndex', name : 'DT_RowIndex', searchable : false, sortable : false},
+            {data : 'DT_RowIndex', name : 'DT_RowIndex', searchable : false, orderable : false},
             {data :'idKelas', name   : 'idKelas'},
             {data :'namaKelas', name : 'namaKelas'},
-            {data : 'action', name : 'action'}
+            {data : 'action', name : 'action', searchable : false, orderable : false}
         ]
 
     });
 
         $('#example2 tbody').on('click', 'td a#btn-edit', function (e) {
+            e.preventDefault();
             var tr = $(this).closest('tr');
             var row = table.row( tr );
-        console.log(table.row(row).data().idKelas);
-        // console.log($(this));
+            console.log(table.row(row).data().idKelas);
     });
 }
 

@@ -8,8 +8,8 @@
 
     <title>SMK N 1 SAWIT</title>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+    {{--<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">--}}
+    {{--<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">--}}
 
 
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -39,8 +39,7 @@
     <![endif]-->
 
     <!-- Google Font -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    {{--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">--}}
 
     {{--<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">--}}
     <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.dataTables.min.css') }}">
