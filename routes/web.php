@@ -31,6 +31,7 @@ Route::prefix('kelas')->group(function (){
     Route::post('/simpanDataKelas', 'Master\kelasControl@insert')->name('insertDataKelas');
     Route::delete('/hapusDataKelas','Master\kelasControl@delete')->name('deleteDataKelas');
     Route::post('/ubahDataKelas','Master\kelasControl@update')->name('updateDataKelas');
+    Route::get('/s','Master\kelasControl@index')->name('dataKelass');
 });
 
 Route::prefix('siswa')->group(function (){

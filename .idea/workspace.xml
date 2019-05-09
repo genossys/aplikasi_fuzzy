@@ -11,6 +11,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+              <folding>
+                <element signature="e#7#389#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="datakelas.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/master/datakelas.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -21,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kelas.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="kelas.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/Master/kelas.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="223">
@@ -132,7 +144,6 @@
         <option value="$PROJECT_DIR$/app/Master/siswa.php" />
         <option value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle/src/DataTables.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master/datasiswa.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master/tambahsiswa.blade.php" />
         <option value="$PROJECT_DIR$/public/js/Master/siswa.js" />
@@ -141,6 +152,7 @@
         <option value="$PROJECT_DIR$/resources/views/admin/master/datakelas.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php" />
         <option value="$PROJECT_DIR$/public/js/Master/kelas.js" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -254,6 +266,11 @@
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="master" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="aplikasi_fuzzy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aplikasi_fuzzy" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="aplikasi_fuzzy" type="b2602c69:ProjectViewProjectNode" />
@@ -421,12 +438,12 @@
       <workItem from="1557377040624" duration="514000" />
       <workItem from="1557377598394" duration="17000" />
       <workItem from="1557377765182" duration="168000" />
-      <workItem from="1557378187212" duration="12694000" />
+      <workItem from="1557378187212" duration="13149000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130794000" />
+    <option name="totallyTimeSpent" value="131249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -524,6 +541,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -738,13 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/Master/siswa.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -835,6 +848,16 @@
         <state relative-caret-position="223">
           <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
