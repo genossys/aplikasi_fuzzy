@@ -244,6 +244,10 @@
         })
 
     })
+    
+    function a() {
+        
+    }
 </script>
 
 @yield('script')
