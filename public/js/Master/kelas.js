@@ -1,63 +1,110 @@
 
+$(document).ready(function () {
+    var alertSukses = $('.alert-success');
+    var alertDanger = $('.alert-danger');
+    getDataKelas('kelas/dataKelas');
 
-$('#formSimpanSiswa').on('submit',function (e) {
-    e.preventDefault();
+    // simpanDataSiswa
+    $('#formSimpanKelas').on('submit',function (e) {
+        e.preventDefault();
+        var method = $(this).attr("method");
+        var url = $(this).attr("action");
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: method,
+            url: url,
+            dataType: 'JSON',
+            data: {
+                _token 		    : $('input[name=_token]').val(),
+                idKelas 		: $('#txtIdKelas').val(),
+                namaKelas   	: $('#txtNamaKelas').val()
+            },
+            success: function(response){
+                console.log(response);
+                if (response.valid){
 
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
+                    alertDanger.hide();
+                    alertSukses.hide();
+                    alertSukses.show().html('<p> Berhasil Menambahkan Data '+response.sukses.idKelas+'</p>');
+                    clearSave();
+                    getDataKelas(response.url);
+                }else{
+                    alertDanger.hide();
+                    alertSukses.hide();
+                    $.each(response.errors, function(key, value){
+                        alertDanger.show().append('<p>'+value+'</p>');
+                    });
+                }
+            },
+            error: function(xhr, textStatus, errorThrown){
+                alert(errorThrown);
+            }
+
+        });
+
     });
 
-    var method = $(this).attr("method");
-    var url = $('#formSimpanSiswa').attr("action");
-    $.ajax({
-        type: method,
-        url: url,
-        dataType: 'JSON',
-        data: {
-            _token 		    : $('input[name=_token]').val(),
-            idKelas 		: $('#txtIdKelas').val(),
-            namaKelas   	: $('#txtNamaKelas').val()
-        },
-        success: function(response){
-            console.log(response);
-            if (response.valid){
 
-                $('.alert-danger').hide();
-                $('.alert-success').hide();
-                $('.alert-success').show().html('<p> Berhasil Menambahkan Data '+response.sukses['idKelas']+'</p>');
-                clearSave();
-                getDataKelas();
-            }else{
-                $('.alert-danger').hide();
-                $('.alert-success').hide();
-                $.each(response.errors, function(key, value){
-                    $('.alert-danger').show().append('<p>'+value+'</p>');
-                });
+    $('#formEditKelas').on('submit', function (e) {
+        e.preventDefault();
+        var method = $(this).attr("method");
+        var url = $(this).attr("action");
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
-        },
-        error: function(xhr, textStatus, errorThrown){
-            alert(errorThrown);
+        });
+        $.ajax({
+            type: method,
+            url: url,
+            dataType: 'JSON',
+            data: {
+                _token 		    : $('input[name=_token]').val(),
+                idKelas 		: $('#txtIdKelasEdit').val(),
+                namaKelas   	: $('#txtNamaKelasEdit').val(),
+                oldId           : $('#txtOldIdKelas').val()
+            },
+            success: function(response){
+                console.log(response);
+                if (response.valid){
+                    alertDanger.hide();
+                    alertSukses.hide();
+                    alertSukses.show().html('<p> Berhasil merubah Data '+$('#txtOldIdKelas').val()+' Menjadi '+$('#txtIdKelasEdit').val()+'  </p>');
+                    clearEdit();
+                    getDataKelas(response.url);
+                }else{
+                    $.each(response.errors, function(key, value){
+                        alertDanger.show().append('<p>'+value+'</p>');
+                    });
+                }
+            },
+            error: function(xhr, textStatus, errorThrown){
+                alert(errorThrown+ xhr+ textStatus);
 
-        }
-
+            }
+        });
     });
 
 });
 
+function test2(id) {
+    alert(id);
+}
 
-function getDataKelas() {
-    var  url = 'kelas/dataKelas';
+function getDataKelas(url) {
     var table = $('#example2').DataTable({
         destroy     : true,
         lengthMenu: [ [5, 10, 15, -1], [5, 10, 15, "All"] ],
         autowidth   : true,
         serverSide  : true,
         processing  : false,
-        ajax        : urlkelas,
+        ajax        : url,
         columns     : [
-            {data : 'DT_RowIndex', name : 'DT_RowIndex', searchable : false, orderable : false},
+            {data : 'DT_RowIndex', name : 'DT_RowIndex', searchable : false, orderable : false, sortable: false},
             {data :'idKelas', name   : 'idKelas'},
             {data :'namaKelas', name : 'namaKelas'},
             {data : 'action', name : 'action', searchable : false, orderable : false}
@@ -65,15 +112,33 @@ function getDataKelas() {
 
     });
 
-        $('#example2 tbody').on('click', 'td a#btn-edit', function (e) {
-            e.preventDefault();
-            var tr = $(this).closest('tr');
-            var row = table.row( tr );
-            var vIdKelas = table.row(row).data().idKelas;
-            var vNamaKelas = table.row(row).data().namaKelas;
-            showDetail(vIdKelas, vNamaKelas);
-            //console.log(table.row(row).data().idKelas);
-        });
+    //     $('#example2').find('tbody').on('click', 'td a#btn-edit', function (e) {
+    //         e.preventDefault();
+    //         var tr = $(this).closest('tr');
+    //         var row = table.row( tr );
+    //         var vIdKelas = table.row(row).data()['idKelas'];
+    //         var vNamaKelas = table.row(row).data()['namaKelas'];
+    //         showDetail(vIdKelas, vNamaKelas);
+    //         // console.log(table.row(row).data().idKelas);
+    //     });
+    //
+    // $('#example2').find('tbody').on('click', 'td a#btn-test', function (e) {
+    //     e.preventDefault();
+    //     var tr = $(this).closest('tr');
+    //     var row = table.row( tr );
+    //     var vIdKelas = table.row(row).data();
+    //     console.log(table.row(row).data()['idKelas']);
+    // });
+    //
+    //     $('#example2').find('tbody').on('click', 'td a#btn-delete', function (e) {
+    //         e.preventDefault();
+    //         var tr = $(this).closest('tr');
+    //         var row = table.row( tr );
+    //         var vIdKelas = table.row(row).data().idKelas;
+    //         if(confirm('Yakin Akan Menghapus Data '+vIdKelas+' ?')){
+    //             deleteDataKelas(vIdKelas);
+    //         }
+    //     });
 }
 
 
@@ -96,48 +161,8 @@ function clearEdit() {
 
 }
 
-function updateDataKelas(route) {
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
 
-    $.ajax({
-        type: 'POST',
-        url: route,
-        dataType: 'JSON',
-        data: {
-
-            _token 		    : $('input[name=_token]').val(),
-            idKelas 		: $('#txtIdKelasEdit').val(),
-            namaKelas   	: $('#txtNamaKelasEdit').val(),
-            oldId           : $('#txtOldIdKelas').val()
-        },
-        success: function(response){
-            console.log(response);
-            if (response.valid){
-                $('.alert-danger').hide();
-                $('.alert-success').hide();
-                $('.alert-success').show().html('<p> Berhasil merubah Data </p>');
-                clearEdit();
-                   getDataKelas();
-            }else{
-                $.each(response.errors, function(key, value){
-                    $('.alert-danger').show().append('<p>'+value+'</p>');
-                });
-            }
-        },
-        error: function(xhr, textStatus, errorThrown){
-            alert(errorThrown, xhr, textStatus);
-
-        }
-    });
-}
-
-
-
-function deleteDataKelas(route, id) {
+function deleteDataKelas(id) {
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -145,7 +170,7 @@ function deleteDataKelas(route, id) {
     });
     $.ajax({
         type: 'POST',
-        url: route,
+        url: 'kelas/hapusDataKelas',
         data: {
             _method: 'DELETE',
             _token: $('input[name=_token]').val(),
@@ -153,9 +178,9 @@ function deleteDataKelas(route, id) {
         },
         success: function (response){
             console.log(response);
-                   getDataKelas();
-        },error: function (error) {
-            console.log(error);
+            getDataKelas(response.url);
+        },error: function (xhr, textStatus, errorThrown) {
+            alert(xhr + textStatus + errorThrown);
         }
 
     });

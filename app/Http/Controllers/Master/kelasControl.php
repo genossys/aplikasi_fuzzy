@@ -28,9 +28,10 @@ class kelasControl extends Controller
 
 
         return DataTables::of($datakelas)
-            ->addColumn('action', function (){
-                return '<a class="btn-sm btn-warning" id="btn-edit" href="#">Edit<a/> &nbsp; 
-                        <a class="btn-sm btn-danger" id="btn-delete" href="#">Delete</a>';
+            ->addColumn('action', function ($datakelas){
+                return '<a class="btn-sm btn-warning" id="btn-edit" href="#" onclick="showDetail(\''.$datakelas->idKelas.'\',\''.$datakelas->namaKelas.'\')">Edit<a/> &nbsp; 
+                        <a class="btn-sm btn-danger" id="btn-delete" href="#">Delete</a>
+                        <a class="btn-sm btn-danger" id="btn-test" href="#" onclick="test2(\''.$datakelas->idKelas.'\');">Delete</a>';
             })
             ->addIndexColumn()
             ->make(true);
@@ -65,7 +66,8 @@ class kelasControl extends Controller
             return response()
                 ->json([
                     'valid' => true,
-                    'sukses' => $kelas
+                    'sukses' => $kelas,
+                    'url' => 'kelas/dataKelas'
                 ]);
         }
 
@@ -90,7 +92,8 @@ class kelasControl extends Controller
             return response()
                 ->json([
                     'valid' => true,
-                    'sukses' => $data
+                    'sukses' => $data,
+                    'url' => 'kelas/dataKelas'
                 ]);
         }
 
@@ -100,7 +103,8 @@ class kelasControl extends Controller
         $id = $r->input('idKelas');
         kelas::destroy($id);
         return response()->json([
-           'sukses' => 'Berhasil Di hapus'
+           'sukses' => 'Berhasil Di hapus',
+            'url' => 'kelas/dataKelas'
         ]);
 
     }
