@@ -15,7 +15,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <a href="/datasiswa" class="btn btn-danger"><i class="fa fa-arrow-circle-left"></i></a>
+                <a href="/siswa" class="btn btn-danger"><i class="fa fa-arrow-circle-left"></i></a>
 
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"

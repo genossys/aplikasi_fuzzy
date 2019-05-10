@@ -20,7 +20,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+//Login
+Route::get('/login','AuthController@login')->name('login');
+Route::post('/postlogin','AuthController@postlogin');
+Route::get('/logout','AuthController@logout')->name('logout');
+
+Route::group(['middleware' => 'auth'],function(){
+
 Route::get('/admin', function () {
     return view('/admin/menuawal');
 })->name('admin');
@@ -53,4 +60,9 @@ Route::get('/siswabaru', function () {
     return view('/admin/master/tambahsiswa');
 })->name('siswabaru');
 
+Route::get('/dataperusahaan', function () {
+    return view('/admin/master/dataperusahaan');
+})->name('dataPerusahaan');
+
+});
 

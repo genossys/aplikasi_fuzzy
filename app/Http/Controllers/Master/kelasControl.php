@@ -28,10 +28,16 @@ class kelasControl extends Controller
 
 
         return DataTables::of($datakelas)
+<<<<<<< HEAD
             ->addColumn('action', function ($datakelas){
                 return '<a class="btn-sm btn-warning" id="btn-edit" href="#" onclick="showDetail(\''.$datakelas->idKelas.'\',\''.$datakelas->namaKelas.'\')">Edit<a/> &nbsp; 
                         <a class="btn-sm btn-danger" id="btn-delete" href="#">Delete</a>
                         <a class="btn-sm btn-danger" id="btn-test" href="#" onclick="test2(\''.$datakelas->idKelas.'\');">Delete</a>';
+=======
+            ->addColumn('action', function (){
+                return '<a class="btn-sm btn-warning" id="btn-edit" href="#"><i class="fa fa-pencil"></i> <span></span><a/> &nbsp; 
+                        <a class="btn-sm btn-danger" id="btn-delete" href="#"><i class="fa fa-trash"></i> <span></span></a>';
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
             })
             ->addIndexColumn()
             ->make(true);

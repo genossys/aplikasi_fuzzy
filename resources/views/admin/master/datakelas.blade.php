@@ -24,13 +24,11 @@
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                             title="Collapse">
                         <i class="fa fa-minus"></i></button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip"
-                            title="Remove">
-                        <i class="fa fa-times"></i></button>
+
                 </div>
             </div>
             <div class="box-body">
-                <table id="example2" class="table table-bordered table-hover">
+                <table id="example2" class="table table-striped  table-bordered table-hover">
                     <thead>
                     <tr>
                         <th>#</th>

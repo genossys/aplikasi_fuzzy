@@ -31,6 +31,8 @@
           href="{{asset('/adminlte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}">
     <!-- Select2 -->
     <link rel="stylesheet" href="{{asset('/adminlte/bower_components/select2/dist/css/select2.min.css')}}">
+    <!-- Data Tables -->
+    <link rel="stylesheet" href="{{asset('/css/datatables-bootstrap4.css')}}">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -80,41 +82,18 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="{{ asset ('/adminlte/img/account-circle-512.png') }}" class="user-image"
                                  alt="User Image">
-                            <span class="hidden-xs">Nama Siswa</span>
+                            <span class="hidden-xs">{{auth()->user()->user_id}}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
-                            <li class="user-header">
-                                <img src="{{ asset ('/adminlte/img/account-circle-512.png') }}" class="img-circle"
-                                     alt="User Image">
 
-                                <p>
-                                    Nama Siswa - kelas
-                                    <small></small>
-                                </p>
-                            </li>
                             <!-- Menu Body -->
-                            <li class="user-body">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
-                            </li>
+
                             <!-- Menu Footer-->
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                </div>
+                            <li class="user-body">
+
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="/logout" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -138,7 +117,7 @@
                     <img src="{{ asset ('/adminlte/img/account-circle-512.png') }}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Nama Siswa</p>
+                    <p>{{auth()->user()->user_id}}</p>
                     <a>Kelas</a>
                 </div>
             </div>
@@ -158,7 +137,7 @@
                     <ul class="treeview-menu">
                         <li><a href="{{ route('dataKelas') }}"><i class="fa fa-home"></i> Data Kelas</a></li>
                         <li><a href="{{ route('dataSiswa') }}"><i class="fa fa-address-book"></i> Data Siswa</a></li>
-                        <li><a href=""><i class="fa fa-industry"></i> Data Tempat Magang</a></li>
+                        <li><a href="{{ route('dataPerusahaan') }}"><i class="fa fa-industry"></i> Data Tempat Magang</a></li>
                     </ul>
                 </li>
 
@@ -242,6 +221,7 @@
 <script src="{{ asset('/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
 
 <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('js/dataTablesBootstrap4.js') }}"></script>
 <script>
     $(document).ready(function () {
         $('.sidebar-menu').tree()
