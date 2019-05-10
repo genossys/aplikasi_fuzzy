@@ -20,6 +20,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+//Login
+Route::get('/login','AuthController@login');
+Route::post('/postlogin','AuthController@postlogin');
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', function () {
     return view('/admin/menuawal');

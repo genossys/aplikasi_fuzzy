@@ -40,11 +40,11 @@
             </li>
 
             <li class="nav-item active navbartataletak itemhover">
-                <a class="nav-link" href="">Product<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/admin">Product<span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item active navbartataletak itemhover">
-                <a class="nav-link" href="/admin">Login <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
             </li>
 
         </ul>
