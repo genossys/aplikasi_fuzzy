@@ -54,4 +54,7 @@ Route::get('/siswabaru', function () {
     return view('/admin/master/tambahsiswa');
 })->name('siswabaru');
 
+Route::get('/dataperusahaan', function () {
+    return view('/admin/master/dataperusahaan');
+})->name('dataPerusahaan');
 

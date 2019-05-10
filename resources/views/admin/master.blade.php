@@ -31,6 +31,8 @@
           href="{{asset('/adminlte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}">
     <!-- Select2 -->
     <link rel="stylesheet" href="{{asset('/adminlte/bower_components/select2/dist/css/select2.min.css')}}">
+    <!-- Data Tables -->
+    <link rel="stylesheet" href="{{asset('/css/datatables-bootstrap4.css')}}">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -158,7 +160,7 @@
                     <ul class="treeview-menu">
                         <li><a href="{{ route('dataKelas') }}"><i class="fa fa-home"></i> Data Kelas</a></li>
                         <li><a href="{{ route('dataSiswa') }}"><i class="fa fa-address-book"></i> Data Siswa</a></li>
-                        <li><a href=""><i class="fa fa-industry"></i> Data Tempat Magang</a></li>
+                        <li><a href="{{ route('dataPerusahaan') }}"><i class="fa fa-industry"></i> Data Tempat Magang</a></li>
                     </ul>
                 </li>
 
@@ -242,6 +244,7 @@
 <script src="{{ asset('/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
 
 <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('js/dataTablesBootstrap4.js') }}"></script>
 <script>
     $(document).ready(function () {
         $('.sidebar-menu').tree()

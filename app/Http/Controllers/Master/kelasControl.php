@@ -29,8 +29,8 @@ class kelasControl extends Controller
 
         return DataTables::of($datakelas)
             ->addColumn('action', function (){
-                return '<a class="btn-sm btn-warning" id="btn-edit" href="#">Edit<a/> &nbsp; 
-                        <a class="btn-sm btn-danger" id="btn-delete" href="#">Delete</a>';
+                return '<a class="btn-sm btn-warning" id="btn-edit" href="#"><i class="fa fa-pencil"></i> <span></span><a/> &nbsp; 
+                        <a class="btn-sm btn-danger" id="btn-delete" href="#"><i class="fa fa-trash"></i> <span></span></a>';
             })
             ->addIndexColumn()
             ->make(true);
