@@ -22,11 +22,12 @@ Auth::routes();
 
 
 //Login
-Route::get('/login','AuthController@login');
+Route::get('/login','AuthController@login')->name('login');
 Route::post('/postlogin','AuthController@postlogin');
+Route::get('/logout','AuthController@logout')->name('logout');
 
+Route::group(['middleware' => 'auth'],function(){
 
-Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', function () {
     return view('/admin/menuawal');
 })->name('admin');
@@ -63,4 +64,6 @@ Route::get('/siswabaru', function () {
 Route::get('/dataperusahaan', function () {
     return view('/admin/master/dataperusahaan');
 })->name('dataPerusahaan');
+
+});
 
