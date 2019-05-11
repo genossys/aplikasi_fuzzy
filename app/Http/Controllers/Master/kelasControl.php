@@ -28,9 +28,16 @@ class kelasControl extends Controller
 
 
         return DataTables::of($datakelas)
+<<<<<<< HEAD
+            ->addColumn('action', function ($datakelas){
+                return '<a class="btn-sm btn-warning" id="btn-edit" href="#" onclick="showDetail(\''.$datakelas->idKelas.'\',\''.$datakelas->namaKelas.'\')">Edit<a/> &nbsp; 
+                        <a class="btn-sm btn-danger" id="btn-delete" href="#">Delete</a>
+                        <a class="btn-sm btn-danger" id="btn-test" href="#" onclick="test2(\''.$datakelas->idKelas.'\');">Delete</a>';
+=======
             ->addColumn('action', function (){
                 return '<a class="btn-sm btn-warning" id="btn-edit" href="#"><i class="fa fa-pencil"></i> <span></span><a/> &nbsp; 
                         <a class="btn-sm btn-danger" id="btn-delete" href="#"><i class="fa fa-trash"></i> <span></span></a>';
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
             })
             ->addIndexColumn()
             ->make(true);
@@ -65,7 +72,8 @@ class kelasControl extends Controller
             return response()
                 ->json([
                     'valid' => true,
-                    'sukses' => $kelas
+                    'sukses' => $kelas,
+                    'url' => 'kelas/dataKelas'
                 ]);
         }
 
@@ -90,7 +98,8 @@ class kelasControl extends Controller
             return response()
                 ->json([
                     'valid' => true,
-                    'sukses' => $data
+                    'sukses' => $data,
+                    'url' => 'kelas/dataKelas'
                 ]);
         }
 
@@ -100,7 +109,8 @@ class kelasControl extends Controller
         $id = $r->input('idKelas');
         kelas::destroy($id);
         return response()->json([
-           'sukses' => 'Berhasil Di hapus'
+           'sukses' => 'Berhasil Di hapus',
+            'url' => 'kelas/dataKelas'
         ]);
 
     }

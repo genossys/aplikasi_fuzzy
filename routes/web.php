@@ -34,11 +34,10 @@ Route::get('/admin', function () {
 
 Route::prefix('kelas')->group(function (){
     Route::get('/','Master\kelasControl@index')->name('dataKelas');
-    Route::get('/dataKelas', 'Master\kelasControl@getData')->name('getDataKelas');
+    Route::get('/dataKelas', 'Master\kelasControl@getData');
     Route::post('/simpanDataKelas', 'Master\kelasControl@insert')->name('insertDataKelas');
     Route::delete('/hapusDataKelas','Master\kelasControl@delete')->name('deleteDataKelas');
     Route::post('/ubahDataKelas','Master\kelasControl@update')->name('updateDataKelas');
-    Route::get('/s','Master\kelasControl@index')->name('dataKelass');
 });
 
 Route::prefix('siswa')->group(function (){

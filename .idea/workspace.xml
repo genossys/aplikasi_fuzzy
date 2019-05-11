@@ -16,8 +16,13 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="187">
+              <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="34" />
+=======
             <state relative-caret-position="157">
               <caret line="26" column="59" lean-forward="false" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
               <folding />
             </state>
           </provider>
@@ -26,6 +31,10 @@
       <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="-222">
+              <caret line="95" column="78" lean-forward="false" selection-start-line="95" selection-start-column="78" selection-end-line="95" selection-end-column="78" />
+=======
             <state relative-caret-position="310">
               <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
               <folding>
@@ -39,7 +48,12 @@
         <entry file="file://$PROJECT_DIR$/resources/views/umum/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="629">
+<<<<<<< HEAD
               <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+=======
+              <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
+>>>>>>> 9b8b86075a767f642730e82ede4c819d3655b9e6
               <folding />
             </state>
           </provider>
@@ -48,8 +62,13 @@
       <file leaf-file-name="sweetalert2.min.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/sweetalert2.min.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="203">
+              <caret line="144" column="31" lean-forward="true" selection-start-line="144" selection-start-column="31" selection-end-line="144" selection-end-column="31" />
+=======
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
               <folding />
             </state>
           </provider>
@@ -58,10 +77,26 @@
       <file leaf-file-name="master.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/master.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="67">
+              <caret line="31" column="150" lean-forward="false" selection-start-line="31" selection-start-column="150" selection-end-line="31" selection-end-column="150" />
+              <folding>
+                <element signature="e#47#75#0#PHP" expanded="true" />
+                <marker date="1557477015161" expanded="true" signature="775:880" ph="..." />
+                <marker date="1557477015161" expanded="true" signature="775:967" ph="..." />
+                <marker date="1557477015161" expanded="true" signature="775:972" ph="..." />
+                <marker date="1557477015161" expanded="true" signature="775:973" ph="..." />
+                <marker date="1557477015161" expanded="true" signature="775:974" ph="..." />
+                <marker date="1557477015161" expanded="true" signature="775:975" ph="..." />
+                <marker date="1557477015161" expanded="true" signature="775:999" ph="..." />
+                <marker date="1557477015161" expanded="true" signature="775:1013" ph="..." />
+                <marker date="1557477015161" expanded="false" signature="785:791" ph=" " />
+=======
             <state relative-caret-position="144">
               <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding>
                 <marker date="1557474351889" expanded="true" signature="10803:10830" ph="..." />
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
               </folding>
             </state>
           </provider>
@@ -152,7 +187,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="php artisan serve" />
       <command text="composer require dmeys/laravel -whatsapp" />
       <command text="composer require dmeys/laravel-whatsapp" />
       <command text="php artisan serve" />
@@ -177,6 +211,7 @@
       <command text="composer require jbboehr/handlebars" />
       <command text="php artisan serve" />
       <command text="php artisan route:list" />
+      <command text="php artisan serve" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -197,6 +232,13 @@
         <option value="$PROJECT_DIR$/public/js/Master/siswa.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Master/siswaControl.php" />
         <option value="$PROJECT_DIR$/app/Master/kelas.php" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/resources/views/admin/master.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/master/datakelas.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/Master/kelas.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php" />
+=======
         <option value="$PROJECT_DIR$/public/js/Master/kelas.js" />
         <option value="$PROJECT_DIR$/resources/views/admin/master/datasiswa.blade.php" />
         <option value="$PROJECT_DIR$/public/css/datatables-bootstrap4.css" />
@@ -211,6 +253,7 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master.blade.php" />
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
       </list>
     </option>
   </component>
@@ -407,14 +450,31 @@
       <workItem from="1557378187212" duration="13149000" />
       <workItem from="1557392786349" duration="649000" />
       <workItem from="1557392786349" duration="127000" />
+<<<<<<< HEAD
+      <workItem from="1557427356817" duration="10134000" />
+      <workItem from="1557469067931" duration="7427000" />
+=======
       <workItem from="1557427356817" duration="9886000" />
       <workItem from="1557452624804" duration="3438000" />
+<<<<<<< HEAD
       <workItem from="1557464566922" duration="9490000" />
+=======
+      <workItem from="1557464566922" duration="8032000" />
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
+>>>>>>> 9b8b86075a767f642730e82ede4c819d3655b9e6
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="154576000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="149323000" />
+=======
+    <option name="totallyTimeSpent" value="153118000" />
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
+>>>>>>> 9b8b86075a767f642730e82ede4c819d3655b9e6
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -479,6 +539,67 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/tambahsiswa.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="34" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="36" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/datasiswa.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/datakelas.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/menuawal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/umum/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="48" lean-forward="false" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
     <entry file="file://$PROJECT_DIR$/public/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -666,6 +787,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+<<<<<<< HEAD
+=======
         </state>
       </provider>
     </entry>
@@ -681,19 +804,37 @@
         <state relative-caret-position="374">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/master/dataperusahaan.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="148">
+          <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="50" />
+=======
         <state relative-caret-position="1173">
           <caret line="69" column="34" lean-forward="false" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
           <folding />
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/datatables-bootstrap4.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="216">
+          <caret line="160" column="37" lean-forward="false" selection-start-line="160" selection-start-column="37" selection-end-line="160" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="177" lean-forward="false" selection-start-line="7" selection-start-column="168" selection-end-line="7" selection-end-column="177" />
+          <folding />
+=======
         <state relative-caret-position="0">
           <caret line="0" column="5221" lean-forward="false" selection-start-line="0" selection-start-column="5221" selection-end-line="0" selection-end-column="5221" />
           <folding />
@@ -735,25 +876,61 @@
             <marker date="1557455992310" expanded="false" signature="733:739" ph=" " />
             <marker date="1557455992310" expanded="true" signature="808:879" ph="..." />
           </folding>
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="187">
+          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="34" />
+=======
         <state relative-caret-position="41">
           <caret line="10" column="68" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="68" />
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="-222">
+          <caret line="95" column="78" lean-forward="false" selection-start-line="95" selection-start-column="78" selection-end-line="95" selection-end-column="78" />
+=======
         <state relative-caret-position="259">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="31" column="150" lean-forward="false" selection-start-line="31" selection-start-column="150" selection-end-line="31" selection-end-column="150" />
+          <folding>
+            <element signature="e#47#75#0#PHP" expanded="true" />
+            <marker date="1557477015161" expanded="true" signature="775:880" ph="..." />
+            <marker date="1557477015161" expanded="true" signature="775:967" ph="..." />
+            <marker date="1557477015161" expanded="true" signature="775:972" ph="..." />
+            <marker date="1557477015161" expanded="true" signature="775:973" ph="..." />
+            <marker date="1557477015161" expanded="true" signature="775:974" ph="..." />
+            <marker date="1557477015161" expanded="true" signature="775:975" ph="..." />
+            <marker date="1557477015161" expanded="true" signature="775:999" ph="..." />
+            <marker date="1557477015161" expanded="true" signature="775:1013" ph="..." />
+            <marker date="1557477015161" expanded="false" signature="785:791" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/Master/kelas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="144" column="31" lean-forward="true" selection-start-line="144" selection-start-column="31" selection-end-line="144" selection-end-column="31" />
+=======
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -798,6 +975,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-68">
           <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+>>>>>>> 65b68985028aa8c451ba1cdb93bad6df6c9c83fa
           <folding />
         </state>
       </provider>
