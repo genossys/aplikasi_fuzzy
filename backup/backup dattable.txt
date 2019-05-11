@@ -1,0 +1,27 @@
+//     $('#example2').find('tbody').on('click', 'td a#btn-edit', function (e) {
+    //         e.preventDefault();
+    //         var tr = $(this).closest('tr');
+    //         var row = table.row( tr );
+    //         var vIdKelas = table.row(row).data()['idKelas'];
+    //         var vNamaKelas = table.row(row).data()['namaKelas'];
+    //         showDetail(vIdKelas, vNamaKelas);
+    //         // console.log(table.row(row).data().idKelas);
+    //     });
+    //
+    // $('#example2').find('tbody').on('click', 'td a#btn-test', function (e) {
+    //     e.preventDefault();
+    //     var tr = $(this).closest('tr');
+    //     var row = table.row( tr );
+    //     var vIdKelas = table.row(row).data();
+    //     console.log(table.row(row).data()['idKelas']);
+    // });
+    //
+    //     $('#example2').find('tbody').on('click', 'td a#btn-delete', function (e) {
+    //         e.preventDefault();
+    //         var tr = $(this).closest('tr');
+    //         var row = table.row( tr );
+    //         var vIdKelas = table.row(row).data().idKelas;
+    //         if(confirm('Yakin Akan Menghapus Data '+vIdKelas+' ?')){
+    //             deleteDataKelas(vIdKelas);
+    //         }
+    //     });

@@ -30,8 +30,7 @@ class kelasControl extends Controller
         return DataTables::of($datakelas)
             ->addColumn('action', function ($datakelas){
                 return '<a class="btn-sm btn-warning" id="btn-edit" href="#" onclick="showDetail(\''.$datakelas->idKelas.'\',\''.$datakelas->namaKelas.'\')">Edit<a/> &nbsp; 
-                        <a class="btn-sm btn-danger" id="btn-delete" href="#">Delete</a>
-                        <a class="btn-sm btn-danger" id="btn-test" href="#" onclick="test2(\''.$datakelas->idKelas.'\');">Delete</a>';
+                        <a class="btn-sm btn-danger" id="btn-delete" href="#" onclick="javascript:if (confirm(\'Apakah Anda Yakin Menghapus Data '.$datakelas->idKelas.' \'))deleteDataKelas(\''.$datakelas->idKelas.'\')">Delete</a>';
             })
             ->addIndexColumn()
             ->make(true);
