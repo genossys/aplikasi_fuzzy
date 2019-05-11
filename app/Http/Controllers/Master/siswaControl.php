@@ -32,7 +32,7 @@ class siswaControl extends Controller
             ->get();
         return DataTables::of($datasiswa)
             ->addColumn('action', function (){
-                return '<a class="btn-sm btn-warning" href="#"  onclick="test()"> Edit <a/> &nbsp; <a class="btn-sm btn-danger" href="#">Delete</a>';
+                return '<a class="btn-sm btn-warning" href="#" id="btn-edit"> Edit <a/> &nbsp; <a class="btn-sm btn-danger" href="#" id="btn-delete">Delete</a>';
             })
             ->editColumn('jenisKelamin', function ($datasiswa){
                 if ($datasiswa->jenisKelamin == 'L'){
@@ -52,8 +52,10 @@ class siswaControl extends Controller
         ];
 
         $rules = [
-            'nis'   => 'required|max:10',
-            'namaSiswa' => 'required|max:255'
+            'nis'       => 'required|max:10',
+            'namaSiswa' => 'required|max:255',
+//            'foto'      => 'image|mimes:jpeg,png,jpg|max:2048'
+
         ];
 
         return Validator::make($r->all(), $rules, $messages);
@@ -75,7 +77,12 @@ class siswaControl extends Controller
             $siswa->alamat = $r->input('alamat');
             $siswa->idKelas = $r->input('idKelas');
             $siswa->namaOrtu = $r->input('namaOrtu');
+            $upload = $r->file('file');
+            $siswa->foto = $upload->getClientOriginalName();
+            $siswa->noHp = $r->input('noHp');
+//            $upload->move(public_path('images/'),$siswa->foto);
             $siswa->save();
+
             return response()
                 ->json([
                     'valid' => true,

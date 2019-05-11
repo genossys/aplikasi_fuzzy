@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_user', function (Blueprint $table) {
+        Schema::create('tb_userd', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('user_id',50);
             $table->string('password',100);

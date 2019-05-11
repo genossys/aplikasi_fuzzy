@@ -26,12 +26,13 @@
             </div>
             <div class="box-body">
 
-                <form method="post" action="" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('insertDataSiswa') }}" enctype="multipart/form-data" id="formtambahsiswa">
+                    {{ csrf_field() }}
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label>NIS</label>
-                                <input type="text" name="nis" id="nis" class="form-control" placeholder="Masukan NIS">
+                                <input type="text" name="txtNis" id="txtNis" class="form-control" placeholder="Masukan NIS">
                             </div>
                         </div>
                     </div>
@@ -40,7 +41,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Nama Siswa</label>
-                                <input type="text" name="namaSiswa" id="namaSiswa" class="form-control"
+                                <input type="text" name="txtNamaSiswa" id="txtNamaSiswa" class="form-control"
                                        placeholder="Masukan Nama Siswa">
                             </div>
                         </div>
@@ -49,9 +50,9 @@
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label>Jenis Kelamin</label>
-                                <select class="form-control" name="jenisKelaminSiswa" id="jenisKelaminSiswa">
-                                    <option value="Laki-laki">Laki-laki</option>
-                                    <option value="Perempuan">Perempuan</option>
+                                <select class="form-control" name="cmbjenisKelamin" id="cmbjenisKelamin">
+                                    <option value="L">Laki-laki</option>
+                                    <option value="P">Perempuan</option>
                                 </select>
                             </div>
                         </div>
@@ -76,7 +77,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Alamat</label>
-                                <textarea class="form-control" rows="3" name="alamatSiswa" id="alamatSiswa"
+                                <textarea class="form-control" rows="3" name="txtAlamatSiswa" id="txtAlamatSiswa"
                                           placeholder="Enter ..."></textarea>
                             </div>
                         </div>
@@ -86,10 +87,7 @@
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label>Kelas</label>
-                                <select class="form-control" name="kelasSiswa" id="kelasSiswa">
-                                    <option>X</option>
-                                    <option>Xi</option>
-                                    <option>Xii</option>
+                                <select class="form-control" name="kelasSiswa" id="cmbKelas">
                                 </select>
                             </div>
                         </div>
@@ -97,7 +95,7 @@
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label>Nama Ortu</label>
-                                <input type="text" name="ortuSiswa" id="ortuSiswa" class="form-control"
+                                <input type="text" name="txtOrtuSiswa" id="txtOrtuSiswa" class="form-control"
                                        placeholder="Masukan Nama Ortu / Wali">
                             </div>
                         </div>
@@ -108,24 +106,26 @@
                             <div class="col-sm-3">
                                 <div class="form-group">
                                     <label>Nomor Hp</label>
-                                    <input type="text" class="form-control" name="telpSiswa" id="telpSiswa"
+                                    <input type="text" class="form-control" name="txtNoHp" id="txtNoHp"
                                            placeholder="Masukan no. hp">
                                 </div>
                             </div>
                             <div class="col-sm-3">
                                 <label>Foto Siswa</label>
                                 <div class="form-group">
-                                    <div class="input-group input-file" name="fotosiswa">
-			<span class="input-group-btn">
-        		<button class="btn btn-default btn-choose" type="button">Pilih</button>
-    		</span>
-                                        <input type="text" class="form-control" name="fotoSiswa" id="fotoSiswa"
-                                               placeholder='Pilih Foto Siswa'/>
-                                        <span class="input-group-btn">
-       			 <button class="btn btn-warning btn-reset" type="button">Reset</button>
-    		</span>
-                                    </div>
+                                    {{--<div class="input-group input-file" name="fotosiswa">--}}
+                                        {{--<span class="input-group-btn">--}}
+                                            {{--<button class="btn btn-default btn-choose" type="button">Pilih</button>--}}
+                                        {{--</span>--}}
+                                        {{--<input type="file" class="form-control" name="txtFotoSiswa" id="txtFotoSiswa"--}}
+                                               {{--placeholder='Pilih Foto Siswa'/>--}}
+                                        {{--<span class="input-group-btn">--}}
+                                             {{--<button class="btn btn-warning btn-reset" type="button">Reset</button>--}}
+                                        {{--</span>--}}
+                                    {{--</div>--}}
+
                                 </div>
+                                <input type="file" name="fileToUpload" id="txtFotoSiswa">
                             </div>
                         </div>
                     </div>
@@ -148,4 +148,8 @@
 
 
 
+@endsection
+
+@section('script')
+    <script src="{{ asset('js/Master/siswa.js') }}"></script>
 @endsection
