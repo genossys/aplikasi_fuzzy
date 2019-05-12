@@ -24,13 +24,7 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{asset('/adminlte/css/skins/_all-skins.min.css')}}">
-    <!-- daterange picker -->
-    <link rel="stylesheet" href="{{asset('/adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.css')}}">
-    <!-- bootstrap datepicker -->
-    <link rel="stylesheet"
-          href="{{asset('/adminlte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}">
-    <!-- Select2 -->
-    <link rel="stylesheet" href="{{asset('/adminlte/bower_components/select2/dist/css/select2.min.css')}}">
+
     <!-- Data Tables -->
     <link rel="stylesheet" href="{{asset('/css/datatables-bootstrap4.css')}}">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -38,7 +32,9 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- jQuery 3 -->
+
+
 
     <!-- Google Font -->
     {{--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">--}}
@@ -137,7 +133,8 @@
                     <ul class="treeview-menu">
                         <li><a href="{{ route('dataKelas') }}"><i class="fa fa-home"></i> Data Kelas</a></li>
                         <li><a href="{{ route('dataSiswa') }}"><i class="fa fa-address-book"></i> Data Siswa</a></li>
-                        <li><a href="{{ route('dataPerusahaan') }}"><i class="fa fa-industry"></i> Data Tempat Magang</a></li>
+                        <li><a href="{{ route('dataPerusahaan') }}"><i class="fa fa-industry"></i> Data Tempat
+                                Magang</a></li>
                     </ul>
                 </li>
 
@@ -199,10 +196,7 @@
     <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-
-<!-- jQuery 3 -->
-
-
+//JQuery
 <script src="{{ asset ('/adminlte/bower_components/jquery/dist/jquery.min.js') }}"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="{{ asset('/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
@@ -214,11 +208,6 @@
 <script src="{{ asset('/adminlte/js/adminlte.min.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('/adminlte/js/demo.js') }}"></script>
-<!-- Select2 -->
-<script src="{{ asset('/adminlte/bower_components/select2/dist/js/select2.full.min.js') }}"></script>
-<script src="{{ asset('/adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
-<!-- bootstrap datepicker -->
-<script src="{{ asset('/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
 
 <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('js/dataTablesBootstrap4.js') }}"></script>
@@ -229,6 +218,8 @@
     })
 </script>
 
+<<<<<<< HEAD
+=======
 <script>
     $(function () {
         //Initialize Select2 Elements
@@ -285,6 +276,7 @@
         });
     });
 </script>
+>>>>>>> 857d661917758f47120a83dbbdf845d9431cb74e
 @yield('script')
 </body>
 </html>

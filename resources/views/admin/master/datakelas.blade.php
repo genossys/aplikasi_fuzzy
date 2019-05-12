@@ -56,8 +56,9 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">x</button>
                         <h4 class="modal-title">Form Tambah Data Kelas</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
                     </div>
                     <form  action="{{route('insertDataKelas')}}" method="POST" id="formSimpanKelas">
                         {{ csrf_field() }}
@@ -73,9 +74,6 @@
                                 <input type="text" class="form-control" placeholder="Nama Kelas" id="txtNamaKelas" name="txtNamaKelas">
                             </div>
                             <button id="btnSimpan" class="btn btn-primary">Simpan</button>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </form>
                 </div>
@@ -109,9 +107,7 @@
                             </div>
                             <button id="btnUpdate" class="btn btn-primary">Update</button>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        </div>
+
                     </form>
                 </div>
             </div>

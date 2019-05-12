@@ -1,5 +1,87 @@
 @extends('admin.master')
+
+@section('css')
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="{{asset('/adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.css')}}">
+    <!-- bootstrap datepicker -->
+    <link rel="stylesheet"
+          href="{{asset('/adminlte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{asset('/adminlte/bower_components/select2/dist/css/select2.min.css')}}">
+
+@endsection
+
+@section('script')
+    <!-- Select2 -->
+    <script src="{{ asset('/adminlte/bower_components/select2/dist/js/select2.full.min.js') }}"></script>
+    <script src="{{ asset('/adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+    <!-- bootstrap datepicker -->
+    <script src="{{ asset('/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+
+    //script datepicker
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+
+            //Date range picker
+            $('#reservation').daterangepicker()
+            //Date range picker with time picker
+            $('#reservationtime').daterangepicker({
+                timePicker: true,
+                timePickerIncrement: 30,
+                format: 'MM/DD/YYYY h:mm A'
+            })
+
+
+            //Date picker
+            $('#datepicker').datepicker({
+                autoclose: true
+            })
+
+        })
+    </script>
+
+    <script>
+        //Java script untuk file input
+        $(document).ready(function () {
+            function bs_input_file() {
+                $(".input-file").before(
+                    function () {
+                        if (!$(this).prev().hasClass('input-ghost')) {
+                            var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0'>");
+                            element.attr("name", $(this).attr("name"));
+                            element.change(function () {
+                                element.next(element).find('input').val((element.val()).split('\\').pop());
+                            });
+                            $(this).find("button.btn-choose").click(function () {
+                                element.click();
+                            });
+                            $(this).find("button.btn-reset").click(function () {
+                                element.val(null);
+                                $(this).parents(".input-file").find('input').val('');
+                            });
+                            $(this).find('input').css("cursor", "pointer");
+                            $(this).find('input').mousedown(function () {
+                                $(this).parents('.input-file').prev().click();
+                                return false;
+                            });
+                            return element;
+                        }
+                    }
+                );
+            }
+
+            $(function () {
+                bs_input_file();
+            });
+        });
+    </script>
+@endsection
+
 @section('content')
+
+
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
@@ -147,9 +229,13 @@
 
 
 
+<<<<<<< HEAD
+@endsection
+=======
 
 @endsection
 
 @section('script')
     <script src="{{ asset('js/Master/siswa.js') }}"></script>
 @endsection
+>>>>>>> 857d661917758f47120a83dbbdf845d9431cb74e

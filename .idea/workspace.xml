@@ -31,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kelas.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="kelas.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/Master/kelas.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -41,12 +41,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kelasControl.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="kelasControl.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="-452">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <marker date="1557644245959" expanded="true" signature="561:4344" ph="..." />
+                <marker date="1557644245959" expanded="true" signature="774:4344" ph="..." />
+                <marker date="1557644245959" expanded="true" signature="1060:4344" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,9 +58,15 @@
       <file leaf-file-name="datakelas.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/master/datakelas.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="103" column="113" lean-forward="false" selection-start-line="103" selection-start-column="99" selection-end-line="103" selection-end-column="113" />
-              <folding />
+            <state relative-caret-position="100">
+              <caret line="101" column="113" lean-forward="false" selection-start-line="101" selection-start-column="113" selection-end-line="101" selection-end-column="113" />
+              <folding>
+                <marker date="1557644043197" expanded="true" signature="4884:4911" ph="..." />
+                <marker date="1557644043197" expanded="true" signature="4884:4934" ph="..." />
+                <marker date="1557644043197" expanded="true" signature="4884:4953" ph="..." />
+                <marker date="1557644043197" expanded="true" signature="4884:4968" ph="..." />
+                <marker date="1557644043197" expanded="true" signature="4884:4979" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,8 +97,8 @@
       <file leaf-file-name="tambahsiswa.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/master/tambahsiswa.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="76" lean-forward="false" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+            <state relative-caret-position="1870">
+              <caret line="110" column="76" lean-forward="false" selection-start-line="110" selection-start-column="76" selection-end-line="110" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -195,10 +205,10 @@
         <option value="$PROJECT_DIR$/resources/views/admin/master/tambahsiswa.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Master/siswaControl.php" />
         <option value="$PROJECT_DIR$/public/js/Master/siswa.js" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php" />
         <option value="$PROJECT_DIR$/public/js/Master/kelas.js" />
         <option value="$PROJECT_DIR$/public/js/Master/kelas.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php" />
       </list>
     </option>
   </component>
@@ -403,12 +413,12 @@
       <workItem from="1557569191580" duration="10048000" />
       <workItem from="1557590515600" duration="700000" />
       <workItem from="1557604603293" duration="6904000" />
-      <workItem from="1557640795580" duration="2972000" />
+      <workItem from="1557640795580" duration="3431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190327000" />
+    <option name="totallyTimeSpent" value="190786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -742,8 +752,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/master/tambahsiswa.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="76" lean-forward="false" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+        <state relative-caret-position="1870">
+          <caret line="110" column="76" lean-forward="false" selection-start-line="110" selection-start-column="76" selection-end-line="110" selection-end-column="76" />
           <folding />
         </state>
       </provider>
@@ -785,17 +795,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/master/datakelas.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="103" column="113" lean-forward="false" selection-start-line="103" selection-start-column="99" selection-end-line="103" selection-end-column="113" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="100">
+          <caret line="101" column="113" lean-forward="false" selection-start-line="101" selection-start-column="113" selection-end-line="101" selection-end-column="113" />
+          <folding>
+            <marker date="1557644043197" expanded="true" signature="4884:4911" ph="..." />
+            <marker date="1557644043197" expanded="true" signature="4884:4934" ph="..." />
+            <marker date="1557644043197" expanded="true" signature="4884:4953" ph="..." />
+            <marker date="1557644043197" expanded="true" signature="4884:4968" ph="..." />
+            <marker date="1557644043197" expanded="true" signature="4884:4979" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -804,6 +812,18 @@
         <state relative-caret-position="204">
           <caret line="84" column="134" lean-forward="false" selection-start-line="84" selection-start-column="134" selection-end-line="84" selection-end-column="134" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-452">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <marker date="1557644245959" expanded="true" signature="561:4344" ph="..." />
+            <marker date="1557644245959" expanded="true" signature="774:4344" ph="..." />
+            <marker date="1557644245959" expanded="true" signature="1060:4344" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
