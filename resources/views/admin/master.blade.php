@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{{asset('/adminlte/css/AdminLTE.min.css')}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="{{asset('/adminlte/css/skins/_all-skins.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/adminlte/css/skins/skin-red.min.css')}}">
 
     <!-- Data Tables -->
     <link rel="stylesheet" href="{{asset('/css/datatables-bootstrap4.css')}}">
@@ -212,71 +212,13 @@
 <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('js/dataTablesBootstrap4.js') }}"></script>
 <script src="{{ asset('js/handlebars.js') }}"></script>
+
 <script>
     $(document).ready(function () {
         $('.sidebar-menu').tree()
     })
 </script>
 
-<<<<<<< HEAD
-=======
-<script>
-    $(function () {
-        //Initialize Select2 Elements
-        $('.select2').select2()
-
-        //Date range picker
-        $('#reservation').daterangepicker()
-        //Date range picker with time picker
-        $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'})
-
-
-        //Date picker
-        $('#datepicker').datepicker({
-            autoclose: true,
-            format: 'yyyy-mm-dd'
-        })
-
-    })
-</script>
-
-
-<script>
-    //Java script untuk file input
-    $(document).ready(function () {
-        function bs_input_file() {
-            $(".input-file").before(
-                function () {
-                    if (!$(this).prev().hasClass('input-ghost')) {
-                        var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0'>");
-                        element.attr("name", $(this).attr("name"));
-                        element.change(function () {
-                            element.next(element).find('input').val((element.val()).split('\\').pop());
-                        });
-                        $(this).find("button.btn-choose").click(function () {
-                            element.click();
-                        });
-                        $(this).find("button.btn-reset").click(function () {
-                            element.val(null);
-                            $(this).parents(".input-file").find('input').val('');
-                        });
-                        $(this).find('input').css("cursor", "pointer");
-                        $(this).find('input').mousedown(function () {
-                            $(this).parents('.input-file').prev().click();
-                            return false;
-                        });
-                        return element;
-                    }
-                }
-            );
-        }
-
-        $(function () {
-            bs_input_file();
-        });
-    });
-</script>
->>>>>>> 857d661917758f47120a83dbbdf845d9431cb74e
 @yield('script')
 </body>
 </html>

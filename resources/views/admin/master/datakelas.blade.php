@@ -27,17 +27,21 @@
 
                 </div>
             </div>
+
             <div class="box-body">
-                <table id="example2" class="table table-striped  table-bordered table-hover">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>ID Kelas</th>
-                        <th>Nama Kelas</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-                </table>
+                    <div class="table-responsive-lg">
+                        <table id="example2"
+                               class="table table-striped  table-bordered table-hover" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>ID Kelas</th>
+                                <th>Nama Kelas</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                        </table>
+                </div>
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
@@ -60,18 +64,20 @@
                         <h4 class="modal-title">Form Tambah Data Kelas</h4>
 
                     </div>
-                    <form  action="{{route('insertDataKelas')}}" method="POST" id="formSimpanKelas">
+                    <form action="{{route('insertDataKelas')}}" method="POST" id="formSimpanKelas">
                         {{ csrf_field() }}
                         <div class="modal-body">
                             <div class="alert alert-danger" style="display:none"></div>
                             <div class="alert alert-success" style="display:none"></div>
                             <div class="form-group">
                                 <label>ID Kelas</label>
-                                <input type="text" class="form-control" placeholder="ID Kelas" id="txtIdKelas" name="txtIdKelas">
+                                <input type="text" class="form-control" placeholder="ID Kelas" id="txtIdKelas"
+                                       name="txtIdKelas">
                             </div>
                             <div class="form-group">
                                 <label>Nama Kelas</label>
-                                <input type="text" class="form-control" placeholder="Nama Kelas" id="txtNamaKelas" name="txtNamaKelas">
+                                <input type="text" class="form-control" placeholder="Nama Kelas" id="txtNamaKelas"
+                                       name="txtNamaKelas">
                             </div>
                             <button id="btnSimpan" class="btn btn-primary">Simpan</button>
                         </div>
@@ -86,8 +92,8 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Form Edit Data Kelas</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Form Edit Data Kelas</h4>
                     </div>
                     <form action="{{route('updateDataKelas')}}" method="POST" id="formEditKelas">
                         {{ csrf_field() }}
@@ -95,15 +101,18 @@
                             <div class="alert alert-danger" style="display:none"></div>
                             <div class="alert alert-success" style="display:none"></div>
                             <div class="form-group">
-                                <input type="hidden" class="form-control" placeholder="ID Kelas" id="txtOldIdKelas" name="txtOldIdKelas">
+                                <input type="hidden" class="form-control" placeholder="ID Kelas" id="txtOldIdKelas"
+                                       name="txtOldIdKelas">
                             </div>
                             <div class="form-group">
                                 <label>ID Kelas</label>
-                                <input type="text" class="form-control" placeholder="ID Kelas" id="txtIdKelasEdit" name="txtIdKelasEdit">
+                                <input type="text" class="form-control" placeholder="ID Kelas" id="txtIdKelasEdit"
+                                       name="txtIdKelasEdit">
                             </div>
                             <div class="form-group">
                                 <label>Nama Kelas</label>
-                                <input type="text" class="form-control" placeholder="Nama Kelas" id="txtNamaKelasEdit" name="txtNamaKelasEdit">
+                                <input type="text" class="form-control" placeholder="Nama Kelas" id="txtNamaKelasEdit"
+                                       name="txtNamaKelasEdit">
                             </div>
                             <button id="btnUpdate" class="btn btn-primary">Update</button>
                         </div>

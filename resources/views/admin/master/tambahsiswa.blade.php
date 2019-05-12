@@ -229,13 +229,7 @@
 
 
 
-<<<<<<< HEAD
-@endsection
-=======
 
 @endsection
 
-@section('script')
-    <script src="{{ asset('js/Master/siswa.js') }}"></script>
-@endsection
->>>>>>> 857d661917758f47120a83dbbdf845d9431cb74e
+
