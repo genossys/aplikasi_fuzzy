@@ -45,6 +45,7 @@ Route::prefix('siswa')->group(function (){
     Route::get('/dataSiswa','Master\siswaControl@getData')->name('getDataSiswa');
     Route::get('/dataKelas','Master\siswaControl@getDataKelas')->name('getListKelas');
     Route::post('/simpanDataSiswa','Master\siswaControl@insert')->name('insertDataSiswa');
+    Route::get('/siswabaru','Master\siswaControl@siswaBaru')->name('siswaBaru');
 });
 
 

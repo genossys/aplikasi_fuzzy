@@ -26,44 +26,63 @@ class kelasControl extends Controller
             ->orderBy('idKelas', 'ASC')
             ->get();
 
-
         return DataTables::of($datakelas)
+<<<<<<< HEAD
 
             ->addColumn('action', function ($datakelas){
                 return '<a class="btn-sm btn-warning" id="btn-edit" href="#" onclick="showDetail(\''.$datakelas->idKelas.'\',\''.$datakelas->namaKelas.'\')">Edit<a/> &nbsp; 
                         <a class="btn-sm btn-danger" id="btn-delete" href="#" onclick="javascript:if (confirm(\'Apakah Anda Yakin Menghapus Data '.$datakelas->idKelas.' \'))deleteDataKelas(\''.$datakelas->idKelas.'\')">Delete</a>';
 
+=======
+            ->addColumn('action', function ($datakelas){
+                return '<a class="btn-sm btn-warning" id="btn-edit" href="#" onclick="showDetail(\''.$datakelas->idKelas.'\',\''.$datakelas->namaKelas.'\')"><i class="fa fa-edit"></i><a/> 
+                        <a class="btn-sm btn-danger" id="btn-delete" href="#" onclick="javascript:if (confirm(\'Apakah Anda Yakin Menghapus Data '.$datakelas->idKelas.' \'))deleteDataKelas(\''.$datakelas->idKelas.'\')"><i class="fa fa-trash"></i></a>';
+>>>>>>> 49734696022fbdcf89e4d0097c6fcf374283890c
             })
             ->addIndexColumn()
             ->make(true);
         }
 
 
-    private function isValid(Request $r){
+    private function isValidInsert(Request $r){
         $messages = [
             'required'  => 'Field :attribute Tidak Boleh Kosong',
             'max'       => 'Filed :attribute Maksimal :max',
         ];
 
-        $rules = [
-            'idKelas'   => 'required|max:10',
-            'namaKelas' => 'required|max:255'
+        $rulesInsert = [
+            'txtIdKelas'   => 'required|max:10',
+            'txtNamaKelas' => 'required|max:255'
+        ];
+        return Validator::make($r->all(), $rulesInsert, $messages);
+
+    }
+    private function isValidUpdate(Request $r){
+        $messages = [
+            'required'  => 'Field :attribute Tidak Boleh Kosong',
+            'max'       => 'Filed :attribute Maksimal :max',
         ];
 
-        return Validator::make($r->all(), $rules, $messages);
+        $rulesEdit = [
+            'txtNamaKelasEdit' => 'required|max:255',
+            'txtIdKelasEdit' => 'required|max:10'
+        ];
+
+        return Validator::make($r->all(), $rulesEdit, $messages);
+
     }
 
     public function insert(Request $r){
 
-        if ($this->isValid($r)->fails()){
+        if ($this->isValidInsert($r)->fails()){
             return response()->json([
                 'valid' => false,
-                'errors' => $this->isValid($r)->errors()->all()
+                'errors' => $this->isValidInsert($r)->errors()->all()
             ]);
         }else{
             $kelas = new kelas;
-            $kelas->idKelas = $r->input('idKelas');
-            $kelas->namaKelas = $r->input('namaKelas');
+            $kelas->idKelas = $r->txtIdKelas;
+            $kelas->namaKelas = $r->txtNamaKelas;
             $kelas->save();
             return response()
                 ->json([
@@ -77,16 +96,16 @@ class kelasControl extends Controller
 
     public function update(Request $r){
 
-        if ($this->isValid($r)->fails()){
+        if ($this->isValidUpdate($r)->fails()){
             return response()->json([
                 'valid' => false,
-                'errors' => $this->isValid($r)->errors()->all()
+                'errors' => $this->isValidUpdate($r)->errors()->all()
             ]);
         }else{
-            $oldid = $r->input('oldId');
+            $oldid = $r->txtOldIdKelas;
             $data = [
-                'idKelas' => $r->input('idKelas'),
-                'namaKelas' => $r->input('namaKelas')
+                'idKelas' => $r->txtIdKelasEdit,
+                'namaKelas' => $r->txtNamaKelasEdit
             ];
             kelas::query()
                 ->where('idKelas','=',$oldid)

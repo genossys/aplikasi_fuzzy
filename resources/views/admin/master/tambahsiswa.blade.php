@@ -108,7 +108,7 @@
             </div>
             <div class="box-body">
 
-                <form method="POST" action="{{ route('insertDataSiswa') }}" enctype="multipart/form-data" id="formtambahsiswa">
+                <form method="POST" action="{{ route('insertDataSiswa') }}"  id="formtambahsiswa">
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-sm-3">
@@ -207,7 +207,7 @@
                                     {{--</div>--}}
 
                                 </div>
-                                <input type="file" name="fileToUpload" id="txtFotoSiswa">
+                                <input type="file" name="txtFoto" id="txtFoto" accept=".jpg, .jpeg, .png">
                             </div>
                         </div>
                     </div>
