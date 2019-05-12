@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6444c4b8-bc81-41a9-a566-7e755dba5786" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="6444c4b8-bc81-41a9-a566-7e755dba5786" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,10 +67,8 @@
             <state relative-caret-position="-13668">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1557647349957" expanded="true" signature="46437:46505" ph="..." />
-                <marker date="1557647349957" expanded="true" signature="46437:46523" ph="..." />
-                <marker date="1557647349957" expanded="true" signature="46437:46536" ph="..." />
-                <marker date="1557647349957" expanded="true" signature="46437:46551" ph="..." />
+                <element signature="e#7529#7533#0" expanded="true" />
+                <element signature="e#7533#7537#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -432,12 +428,12 @@
       <workItem from="1557590515600" duration="700000" />
       <workItem from="1557604603293" duration="6904000" />
       <workItem from="1557640795580" duration="3620000" />
-      <workItem from="1557647289306" duration="61000" />
+      <workItem from="1557647289306" duration="293000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191036000" />
+    <option name="totallyTimeSpent" value="191268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -831,10 +827,8 @@
         <state relative-caret-position="-13668">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1557647349957" expanded="true" signature="46437:46505" ph="..." />
-            <marker date="1557647349957" expanded="true" signature="46437:46523" ph="..." />
-            <marker date="1557647349957" expanded="true" signature="46437:46536" ph="..." />
-            <marker date="1557647349957" expanded="true" signature="46437:46551" ph="..." />
+            <element signature="e#7529#7533#0" expanded="true" />
+            <element signature="e#7533#7537#0" expanded="true" />
           </folding>
         </state>
       </provider>
