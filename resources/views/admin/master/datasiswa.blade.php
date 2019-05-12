@@ -11,17 +11,11 @@
     <!-- Main content -->
     <section class="content">
 
-<<<<<<< HEAD
-        <!-- Default box -->
-        <div class="box">
-            <div class="box-header with-border">
-                <a href="/siswabaru" class="btn btn-primary">Siswa Baru</a>
-=======
+
     <!-- Default box -->
     <div class="box">
         <div class="box-header with-border">
            <a href="{{route('siswaBaru')}}" class="btn btn-primary">Siswa Baru</a>
->>>>>>> 49734696022fbdcf89e4d0097c6fcf374283890c
 
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"

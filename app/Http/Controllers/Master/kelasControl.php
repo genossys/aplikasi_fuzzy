@@ -27,17 +27,11 @@ class kelasControl extends Controller
             ->get();
 
         return DataTables::of($datakelas)
-<<<<<<< HEAD
 
-            ->addColumn('action', function ($datakelas){
-                return '<a class="btn-sm btn-warning" id="btn-edit" href="#" onclick="showDetail(\''.$datakelas->idKelas.'\',\''.$datakelas->namaKelas.'\')">Edit<a/> &nbsp; 
-                        <a class="btn-sm btn-danger" id="btn-delete" href="#" onclick="javascript:if (confirm(\'Apakah Anda Yakin Menghapus Data '.$datakelas->idKelas.' \'))deleteDataKelas(\''.$datakelas->idKelas.'\')">Delete</a>';
-
-=======
             ->addColumn('action', function ($datakelas){
                 return '<a class="btn-sm btn-warning" id="btn-edit" href="#" onclick="showDetail(\''.$datakelas->idKelas.'\',\''.$datakelas->namaKelas.'\')"><i class="fa fa-edit"></i><a/> 
-                        <a class="btn-sm btn-danger" id="btn-delete" href="#" onclick="javascript:if (confirm(\'Apakah Anda Yakin Menghapus Data '.$datakelas->idKelas.' \'))deleteDataKelas(\''.$datakelas->idKelas.'\')"><i class="fa fa-trash"></i></a>';
->>>>>>> 49734696022fbdcf89e4d0097c6fcf374283890c
+                        <a class="btn-sm btn-danger" id="btn-delete" href="#" onclick="deleteDataKelas(\''.$datakelas->idKelas.'\')"><i class="fa fa-trash"></i></a>';
+
             })
             ->addIndexColumn()
             ->make(true);
