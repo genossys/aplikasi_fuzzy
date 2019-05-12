@@ -75,7 +75,7 @@
                                        name="txtIdKelas">
                             </div>
                             <div class="form-group">
-                                <label>Nama Kelas</label>
+                                <label>Nama Kelasu</label>
                                 <input type="text" class="form-control" placeholder="Nama Kelas" id="txtNamaKelas"
                                        name="txtNamaKelas">
                             </div>
