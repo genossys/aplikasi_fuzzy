@@ -28,14 +28,21 @@ class kelasControl extends Controller
 
 
         return DataTables::of($datakelas)
+<<<<<<< HEAD
 
             ->addColumn('action', function ($datakelas){
                 return '<a class="btn-sm btn-warning" id="btn-edit" href="#" onclick="showDetail($datakelas->idKelas,$datakelas->namaKelas)"><i class="fa fa-pencil"></i><a/> &nbsp; 
                         <a class="btn-sm btn-danger" id="btn-test" href="#" onclick="test2($datakelas->idKelas);"><i class="fa fa-trash"></i></a>';
+=======
+            ->addColumn('action', function ($datakelas){
+                return '<a class="btn-sm btn-warning" id="btn-edit" href="#" onclick="showDetail(\''.$datakelas->idKelas.'\',\''.$datakelas->namaKelas.'\')">Edit<a/> &nbsp; 
+                        <a class="btn-sm btn-danger" id="btn-delete" href="#" onclick="javascript:if (confirm(\'Apakah Anda Yakin Menghapus Data '.$datakelas->idKelas.' \'))deleteDataKelas(\''.$datakelas->idKelas.'\')">Delete</a>';
+>>>>>>> 857d661917758f47120a83dbbdf845d9431cb74e
             })
             ->addIndexColumn()
             ->make(true);
-    }
+        }
+
 
     private function isValid(Request $r){
         $messages = [
