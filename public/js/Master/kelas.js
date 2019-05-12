@@ -34,19 +34,15 @@
             type: method,
             url: url,
             dataType: 'JSON',
-            data: {
-                _token 		    : $('input[name=_token]').val(),
-                idKelas 		: $('#txtIdKelas').val(),
-                namaKelas   	: $('#txtNamaKelas').val()
-            },
+            data: new FormData($('#formSimpanKelas')[0]),
+            contentType: false,
+            cache: false,
+            processData: false,
             success: function(response){
                 console.log(response);
                 if (response.valid){
-
-                    alertDanger.hide();
-                    alertSukses.hide();
-                    alertSukses.show().html('<p> Berhasil Menambahkan Data '+response.sukses.idKelas+'</p>');
                     clearSave();
+                    alertSukses.show().html('<p> Berhasil Menambahkan Data '+response.sukses.idKelas+'</p>');
                     table.draw();
                 }else{
                     alertDanger.hide();
@@ -57,7 +53,7 @@
                 }
             },
             error: function(xhr, textStatus, errorThrown){
-                alert(errorThrown);
+                alert(errorThrown+ xhr+ textStatus);
             }
 
         });
@@ -78,21 +74,19 @@
             type: method,
             url: url,
             dataType: 'JSON',
-            data: {
-                _token 		    : $('input[name=_token]').val(),
-                idKelas 		: $('#txtIdKelasEdit').val(),
-                namaKelas   	: $('#txtNamaKelasEdit').val(),
-                oldId           : $('#txtOldIdKelas').val()
-            },
+            data: new FormData($('#formEditKelas')[0]),
+            contentType: false,
+            cache: false,
+            processData: false,
             success: function(response){
                 console.log(response);
                 if (response.valid){
-                    alertDanger.hide();
-                    alertSukses.hide();
-                    alertSukses.show().html('<p> Berhasil merubah Data '+$('#txtOldIdKelas').val()+' Menjadi '+$('#txtIdKelasEdit').val()+'  </p>');
                     clearEdit();
+                    alertSukses.show().html('<p> Berhasil merubah Data '+$('#txtOldIdKelas').val()+' Menjadi '+response.sukses.idKelas+'  </p>');
                     table.draw();
                 }else{
+                    alertDanger.hide();
+                    alertSukses.hide();
                     $.each(response.errors, function(key, value){
                         alertDanger.show().append('<p>'+value+'</p>');
                     });
@@ -113,7 +107,7 @@
         });
         $.ajax({
             type: 'POST',
-            url: 'kelas/hapusDataKelas',
+            url: '/kelas/hapusDataKelas',
             data: {
                 _method: 'DELETE',
                 _token: $('input[name=_token]').val(),
@@ -133,6 +127,7 @@
 
 
 function showDetail(id, nama) {
+    clearEdit();
     $('#txtOldIdKelas').val(id);
     $('#txtIdKelasEdit').val(id);
     $('#txtNamaKelasEdit').val(nama);
@@ -142,11 +137,14 @@ function showDetail(id, nama) {
 function clearSave() {
     $('#txtIdKelas').val('');
     $('#txtNamaKelas').val('');
+    alertDanger.hide();
+    alertSukses.hide();
 
 }
 
 function clearEdit() {
     $('#txtIdKelasEdit').val('');
     $('#txtNamaKelasEdit').val('');
-
+    alertDanger.hide();
+    alertSukses.hide();
 }

@@ -17,6 +17,10 @@ class siswaControl extends Controller
         return view('admin.master.datasiswa');
     }
 
+    public function siswaBaru(){
+        return view('/admin/master/tambahsiswa');
+    }
+
     public function getDataKelas(){
         $datakelas = kelas::query()
             ->select('idKelas')
@@ -54,7 +58,7 @@ class siswaControl extends Controller
         $rules = [
             'nis'       => 'required|max:10',
             'namaSiswa' => 'required|max:255',
-//            'foto'      => 'image|mimes:jpeg,png,jpg|max:2048'
+            'foto'      => 'images|mimes:jpeg,png,jpg|max:2048'
 
         ];
 
@@ -62,33 +66,57 @@ class siswaControl extends Controller
     }
     public function insert(Request $r){
 
-        if ($this->isValid($r)->fails()){
-            return response()->json([
-                'valid' => false,
-                'errors' => $this->isValid($r)->errors()->all()
-            ]);
-        }else {
+//        request()->validate([
+//           'image' => 'required|image|mimes:jpg,jpeg,png|max:2048'
+//        ]);
 
-            $siswa = new siswa;
-            $siswa->nis = $r->input('nis');
-            $siswa->namaSiswa = $r->input('namaSiswa');
-            $siswa->jenisKelamin = $r->input('jenisKelamin');
-            $siswa->tanggalLahir = $r->input('tanggalLahir');
-            $siswa->alamat = $r->input('alamat');
-            $siswa->idKelas = $r->input('idKelas');
-            $siswa->namaOrtu = $r->input('namaOrtu');
-            $upload = $r->file('file');
-            $siswa->foto = $upload->getClientOriginalName();
-            $siswa->noHp = $r->input('noHp');
-//            $upload->move(public_path('images/'),$siswa->foto);
-            $siswa->save();
+//        $imagename = time().'.'.$r->image->getClientOriginalExtension();
+//            $imagename = time().'-'.$r->txtFoto->getClientOriginalName();
+//        $r->image->move(public_path('images'), $imagename);
 
-            return response()
-                ->json([
-                    'valid' => true,
-                    'sukses' => $siswa
-                ]);
-        }
+        return response()->json([
+//           'hasil' => $imagename,
+            'ar' => $r->txtNis
+        ]);
+//        if ($this->isValid($r)->fails()){
+//            return response()->json([
+//                'valid' => false,
+//                'errors' => $this->isValid($r)->errors()->all()
+//            ]);
+//        }else {
+//
+//            if ($r->hasFile('image')){
+//                $upload = $r->file('txtFotoSiswa');
+//                $name = $upload->getClientOriginalName().'.'.$upload->getClientOriginalExtension();
+//
+//            }else{
+//                return response()->json([
+//                    'hasil' => 'tidak ada gambar'
+//                ]);
+//            }
+    //            $siswa = new siswa;
+    //            $siswa->nis = $r->input('nis');
+    //            $siswa->namaSiswa = $r->input('namaSiswa');
+    //            $siswa->jenisKelamin = $r->input('jenisKelamin');
+    //            $siswa->tanggalLahir = $r->input('tanggalLahir');
+    //            $siswa->alamat = $r->input('alamat');
+    //            $siswa->idKelas = $r->input('idKelas');
+    //            $siswa->namaOrtu = $r->input('namaOrtu');
+    //            $siswa->noHp = $r->input('noHp');
+
+
+
+            //$upload->move(public_path().'/images/', $name);
+            //$siswa->foto = public_path().'/images/'.$name;
+            //$siswa->save();
+
+//            return response()
+//                ->json([
+//                    'valid' => true,
+//                    'sukses' => $siswa,
+//                    'namafile' => $name
+//                ]);
+//        }
     }
 
 
