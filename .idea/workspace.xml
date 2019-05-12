@@ -41,16 +41,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kelasControl.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="kelasControl.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-452">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="500">
+              <caret line="105" column="24" lean-forward="true" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
               <folding>
                 <marker date="1557644245959" expanded="true" signature="561:4344" ph="..." />
                 <marker date="1557644245959" expanded="true" signature="774:4344" ph="..." />
                 <marker date="1557644245959" expanded="true" signature="1060:4344" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="master.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/master.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,8 +207,6 @@
         <option value="$PROJECT_DIR$/app/Master/siswa.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_11_051846_add_no_hp_tbsiswa.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_11_052007_add_no_hp_tbsiswa.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/master.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/master.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master/datasiswa.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
@@ -209,6 +217,8 @@
         <option value="$PROJECT_DIR$/public/js/Master/kelas.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/master.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/master.blade.php" />
       </list>
     </option>
   </component>
@@ -413,12 +423,12 @@
       <workItem from="1557569191580" duration="10048000" />
       <workItem from="1557590515600" duration="700000" />
       <workItem from="1557604603293" duration="6904000" />
-      <workItem from="1557640795580" duration="3431000" />
+      <workItem from="1557640795580" duration="3620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190786000" />
+    <option name="totallyTimeSpent" value="190975000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -738,13 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="245" column="32" lean-forward="false" selection-start-line="245" selection-start-column="32" selection-end-line="245" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/images/1557576096.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -817,13 +820,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Master/kelasControl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-452">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="500">
+          <caret line="105" column="24" lean-forward="true" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
           <folding>
             <marker date="1557644245959" expanded="true" signature="561:4344" ph="..." />
             <marker date="1557644245959" expanded="true" signature="774:4344" ph="..." />
             <marker date="1557644245959" expanded="true" signature="1060:4344" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
