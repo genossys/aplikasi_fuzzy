@@ -24,10 +24,22 @@
             {data: 'idKelas', name: 'idKelas'},
             {data: 'action', name: 'action', orderable: false, searchable: false}
         ], order: [[1, 'asc']]
+        ,
+        initComplete: function () {
+            this.api().columns([1,2,3,4,5]).every(function () {
+                var column = this;
+                var input = document.createElement("input");
+                $(input).appendTo($(column.footer()).empty())
+                    .on('change', function () {
+                        column.search($(this).val(), false, false, true).draw();
+                    });
+            });
+        }
 
     });
 
-    $('#example2 tbody').on('click', 'td a.details-control', function () {
+    $('#example2 tbody').on('click', 'td a.details-control', function (e) {
+        e.preventDefault();
         var tr = $(this).closest('tr');
         var row = table.row(tr);
 

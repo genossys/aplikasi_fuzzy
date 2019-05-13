@@ -35,7 +35,8 @@
 
             //Date picker
             $('#datepicker').datepicker({
-                autoclose: true
+                autoclose: true,
+                format: 'yyyy-mm-dd'
             })
 
         })
@@ -148,7 +149,7 @@
                                         <i class="fa fa-calendar"></i>
                                     </div>
                                     <input type="text" class="form-control pull-right" id="datepicker"
-                                           name="lahirSiswa">
+                                           name="txtTanggalLahir">
                                 </div>
                             </div>
                         </div>
@@ -159,7 +160,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Alamat</label>
-                                <textarea class="form-control" rows="3" name="txtAlamatSiswa" id="txtAlamatSiswa"
+                                <textarea class="form-control" rows="3" name="txtAlamat" id="txtAlamat"
                                           placeholder="Enter ..."></textarea>
                             </div>
                         </div>
@@ -169,7 +170,7 @@
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label>Kelas</label>
-                                <select class="form-control" name="kelasSiswa" id="cmbKelas">
+                                <select class="form-control" name="cmbKelas" id="cmbKelas">
                                 </select>
                             </div>
                         </div>

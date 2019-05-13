@@ -35,20 +35,26 @@ class siswaControl extends Controller
     public function getData()
     {
         $datasiswa = siswa::query()
-            ->select('nis', 'namaSiswa', 'jenisKelamin', 'tanggalLahir', 'alamat', 'idKelas', 'namaOrtu')
+            ->select('nis', 'namaSiswa', 'jenisKelamin', 'tanggalLahir', 'alamat', 'idKelas', 'namaOrtu', 'foto', 'noHp')
             ->orderBy('nis', 'ASC')
             ->get();
         return DataTables::of($datasiswa)
             ->addColumn('action', function () {
                 return '<a class="btn-sm btn-warning" href="#" id="btn-edit"> <i class="fa fa-edit"></i> <a/> 
                         <a class="btn-sm btn-danger" href="#" id="btn-delete" style="margin-left: 5px"><i class="fa fa-trash"></i></a>
-                        <a class="btn-sm btn-danger details-control"><i class="fa fa-folder-open"></i></a>';
+                        <a class="btn-sm btn-danger details-control" href="#" id="btn-detail"><i class="fa fa-folder-open"></i></a>';
             })
             ->editColumn('jenisKelamin', function ($datasiswa) {
                 if ($datasiswa->jenisKelamin == 'L') {
                     return 'Laki-Laki';
                 } else {
                     return 'Perempuan';
+                }
+            })->editColumn('foto', function ($datasiswa){
+                if ($datasiswa->foto == ''){
+                    return 'default.png';
+                }else{
+                    return $datasiswa->foto;
                 }
             })
             ->addIndexColumn()
@@ -60,12 +66,17 @@ class siswaControl extends Controller
         $messages = [
             'required' => 'Field :attribute Tidak Boleh Kosong',
             'max' => 'Filed :attribute Maksimal :max',
+            'image' => 'File Bukan Gambar'
         ];
 
         $rules = [
-            'nis' => 'required|max:10',
-            'namaSiswa' => 'required|max:255',
-            'txtFoto' => 'images|mimes:jpeg,png,jpg|max:100'
+            'txtNis' => 'required|max:10',
+            'txtNamaSiswa' => 'required|max:255',
+            'cmbjenisKelamin' => 'required|',
+            'txtTanggalLahir' => 'required|',
+            'cmbKelas' => 'required|',
+            'txtNoHp' => 'required|',
+            'txtFoto' => 'required|image|mimes:jpeg,png,jpg|max:100'
 
         ];
 
@@ -75,15 +86,37 @@ class siswaControl extends Controller
     public function insert(Request $r)
     {
 
-        if ($r->hasFile('txtFoto')){
-                $upload = $r->file('txtFoto');
-                $name = $upload->getClientOriginalName();
-                $r->txtFoto->move(public_path('images/make'), $name);
-            }
+        if ($this->isValid($r)->fails()){
+            return response()->json([
+                'valid' => false,
+                'errors' => $this->isValid($r)->errors()->all()
+            ]);
+        }else{
+            if ($r->hasFile('txtFoto')){
+                    $nis = $r->txtNis;
+                    $upload = $r->file('txtFoto');
+                    $namafoto = $nis.'.'.$upload->getClientOriginalExtension();
+                    $r->txtFoto->move(public_path('images/fotosiswa'), $namafoto);
+                    $siswa = new siswa;
+                    $siswa->nis = $r->txtNis;
+                    $siswa->namaSiswa = $r->txtNamaSiswa;
+                    $siswa->jenisKelamin = $r->cmbjenisKelamin;
+                    $siswa->tanggalLahir = $r->txtTanggalLahir;
+                    $siswa->alamat = $r->txtAlamat;
+                    $siswa->idKelas = $r->cmbKelas;
+                    $siswa->namaOrtu = $r->txtOrtuSiswa;
+                    $siswa->foto = $namafoto;
+                    $siswa->noHp = $r->txtNoHp;
+                    $siswa->save();
+                return response()
+                    ->json([
+                        'valid' => true,
+                        'sukses' => $siswa,
+                        'url' => 'kelas/dataKelas'
+                    ]);
+                }
 
-        return response()->json([
-            'ar' => $name
-        ]);
+        }
     }
 
 

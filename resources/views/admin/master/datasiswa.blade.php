@@ -38,6 +38,17 @@
                             <th>Action</th>
                         </tr>
                         </thead>
+                        <tfoot>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </tfoot>
 
                     </table>
                 </div>
@@ -60,52 +71,52 @@
     <script src="{{ asset('js/handlebars.js') }}"></script>
     <script id="details-template" type="text/x-handlebars-templatel">
         @verbatim
-            <div id="foto" class="col-lg-2">
-                <img src="images/12.jpg" height="50" width="50">
+            <div id="foto" class="col-lg-2 text-center">
+                <img src="images/fotosiswa/{{ 'foto' }}" height="70" width="70">
             </div>
             <div id="detail" class="col-lg-10">
-                <div class="col-lg-2">
-                    NIS :
+                <div class="table-responsive-lg">
+                <table class="table table-responsive">
+                    <tr>
+                        <td>NIS</td>
+                        <td>:</td>
+                        <td>{{ 'nis' }}</td>
+                    </tr>
+                    <tr>
+                        <td>NAMA</td>
+                        <td>:</td>
+                        <td>{{ 'namaSiswa' }}</td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin</td>
+                        <td>:</td>
+                        <td>{{ 'jenisKelamin' }}</td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin</td>
+                        <td>:</td>
+                        <td>{{ 'jenisKelamin' }}</td>
+                    </tr><tr>
+                        <td>Alamat</td>
+                        <td>:</td>
+                        <td>{{ 'alamat' }}</td>
+                    </tr><tr>
+                        <td>Kelas</td>
+                        <td>:</td>
+                        <td>{{ 'idKelas' }}</td>
+                    </tr>
+                    <tr>
+                        <td>Nama Orang Tua</td>
+                        <td>:</td>
+                        <td>{{ 'namaOrtu' }}</td>
+                    </tr>
+                    <tr>
+                        <td>No. Hp</td>
+                        <td>:</td>
+                        <td>{{ 'noHp' }}</td>
+                    </tr>
+                </table>
                 </div>
-                <div class="col-lg-10">
-                    {{ 'nis' }}
-                </div>
-                <br>
-                <div class="col-lg-2">
-                    NAMA :
-                </div>
-                <div class="col-lg-10">
-                    {{ 'namaSiswa' }}
-                </div>
-                <br>
-                <div class="col-lg-2">
-                    NAMA :
-                </div>
-                <div class="col-lg-10">
-                    {{ 'namaSiswa' }}
-                </div>
-                <br>
-                <div class="col-lg-2">
-                    NAMA :
-                </div>
-                <div class="col-lg-10">
-                    {{ 'namaSiswa' }}
-                </div>
-                <br>
-                <div class="col-lg-2">
-                    NAMA :
-                </div>
-                <div class="col-lg-10">
-                    {{ 'namaSiswa' }}
-                </div>
-                <br>
-                <div class="col-lg-2">
-                    NAMA :
-                </div>
-                <div class="col-lg-10">
-                    {{ 'namaSiswa' }}
-                </div>
-                <br>
             </div>
         @endverbatim
     </script>
