@@ -109,7 +109,7 @@
             </div>
             <div class="box-body">
             <div class="alert alert-danger" style="display:none"></div>
-            <div class="alert alert-success" style="display:none"></div>
+            <div class="alert alert-success" style="display:none">oke</div>
 
                 <form method="POST" action="{{ route('insertDataSiswa') }}"  id="formtambahsiswa">
                     {{ csrf_field() }}
