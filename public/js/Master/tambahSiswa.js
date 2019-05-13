@@ -25,3 +25,8 @@ $.get('/siswa/dataKelas', function (data) {
         $('#cmbKelas').append('<option>'+element.idKelas+'</option>')
     });
 });
+
+
+function clearSimpanSiswa() {
+    
+}
