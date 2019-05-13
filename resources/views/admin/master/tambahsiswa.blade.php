@@ -18,7 +18,6 @@
     <!-- bootstrap datepicker -->
     <script src="{{ asset('/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
 
-    //script datepicker
     <script>
         $(function () {
             //Initialize Select2 Elements
@@ -77,6 +76,7 @@
             });
         });
     </script>
+    <script src="{{ asset('js/Master/tambahSiswa.js') }}"></script>
 @endsection
 
 @section('content')
@@ -199,15 +199,23 @@
                                         {{--<span class="input-group-btn">--}}
                                             {{--<button class="btn btn-default btn-choose" type="button">Pilih</button>--}}
                                         {{--</span>--}}
-                                        {{--<input type="file" class="form-control" name="txtFotoSiswa" id="txtFotoSiswa"--}}
+                                        {{--<input type="text" class="form-control" name="txtFoto" id="txtFoto"--}}
                                                {{--placeholder='Pilih Foto Siswa'/>--}}
                                         {{--<span class="input-group-btn">--}}
                                              {{--<button class="btn btn-warning btn-reset" type="button">Reset</button>--}}
                                         {{--</span>--}}
                                     {{--</div>--}}
-
+                                    {{--<div class="input-group-prepend">--}}
+                                        {{--<span class="input-group-text" id="inputGroupFileAddon01">Upload</span>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="custom-file">--}}
+                                        {{--<input type="file" class="custom-file-input" id="inputGroupFile01"--}}
+                                               {{--aria-describedby="inputGroupFileAddon01">--}}
+                                        {{--<label class="custom-file-label" for="inputGroupFile01">Choose file</label>--}}
+                                    {{--</div>--}}
+                                    <input type="file" class="custom-file-input" name="txtFoto" id="txtFoto" accept="image/*">
                                 </div>
-                                <input type="file" name="txtFoto" id="txtFoto" accept=".jpg, .jpeg, .png">
+
                             </div>
                         </div>
                     </div>

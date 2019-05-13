@@ -29,7 +29,6 @@
                     <table id="example2" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                         <tr>
-                            <th></th>
                             <th>#</th>
                             <th>NIS</th>
                             <th>Nama Siswa</th>
@@ -58,106 +57,60 @@
 @endsection
 
 @section('script')
-
+    <script src="{{ asset('js/handlebars.js') }}"></script>
     <script id="details-template" type="text/x-handlebars-templatel">
         @verbatim
-        <div id="foto" class="col-lg-2">
-            Foto Siswa
-        </div>
-        <div id="detail" class="col-lg-10">
-            <div class="col-lg-2">
-                NIS :
+            <div id="foto" class="col-lg-2">
+                <img src="images/12.jpg" height="50" width="50">
             </div>
-            <div class="col-lg-10">
-                {{ 'nis' }}
+            <div id="detail" class="col-lg-10">
+                <div class="col-lg-2">
+                    NIS :
+                </div>
+                <div class="col-lg-10">
+                    {{ 'nis' }}
+                </div>
+                <br>
+                <div class="col-lg-2">
+                    NAMA :
+                </div>
+                <div class="col-lg-10">
+                    {{ 'namaSiswa' }}
+                </div>
+                <br>
+                <div class="col-lg-2">
+                    NAMA :
+                </div>
+                <div class="col-lg-10">
+                    {{ 'namaSiswa' }}
+                </div>
+                <br>
+                <div class="col-lg-2">
+                    NAMA :
+                </div>
+                <div class="col-lg-10">
+                    {{ 'namaSiswa' }}
+                </div>
+                <br>
+                <div class="col-lg-2">
+                    NAMA :
+                </div>
+                <div class="col-lg-10">
+                    {{ 'namaSiswa' }}
+                </div>
+                <br>
+                <div class="col-lg-2">
+                    NAMA :
+                </div>
+                <div class="col-lg-10">
+                    {{ 'namaSiswa' }}
+                </div>
+                <br>
             </div>
-            <br>
-            <div class="col-lg-2">
-                NAMA :
-            </div>
-            <div class="col-lg-10">
-                {{ 'namaSiswa' }}
-            </div>
-            <br>
-        </div>
         @endverbatim
     </script>
 
-    <script>
-
-
-        getDataSiswa();
-
-        function getDataSiswa() {
-
-
-            var template = Handlebars.compile($("#details-template").html());
-
-            var table = $('#example2').DataTable({
-                destroy: true,
-                lengthMenu: [[5, 10, 15, -1], [5, 10, 15, "All"]],
-                autowidth: true,
-                serverSide: true,
-                processing: false,
-                ajax: '{{route('getDataSiswa')}}',
-                columns: [
-                    {
-                        "className": 'details-control',
-                        "orderable": false,
-                        "searchable": false,
-                        "data": null,
-                        "defaultContent": '<button>detail</button>'
-                    },
-                    {data: 'DT_RowIndex', name: 'DT_RowIndex', searchable: false, orderable: false},
-                    {data: 'nis', name: 'nis'},
-                    {data: 'namaSiswa', name: 'namaSiswa'},
-                    {data: 'jenisKelamin', name: 'jenisKelamin'},
-                    {data: 'tanggalLahir', name: 'tanggalLahir'},
-                    {data: 'idKelas', name: 'idKelas'},
-                    {data: 'action', name: 'action', orderable: false, searchable: false}
-                ], order: [[1, 'asc']]
-//            ,initComplete: function () {
-//                    this.api().columns([1,2,3,4,5,6]).every(function () {
-//                        var column = this;
-//                        var input = document.createElement("input");
-//                        $(input).appendTo($(column.footer()).empty())
-//                            .on('change', function () {
-//                                column.search($(this).val(), false, false, true).draw();
-//                            });
-//                    });
-//            }
-
-            });
-
-            $('#example2 tbody').on('click', 'td.details-control', function () {
-                var tr = $(this).closest('tr');
-                var row = table.row(tr);
-
-                if (row.child.isShown()) {
-                    row.child.hide();
-                    tr.removeClass('shown');
-                }
-                else {
-                    row.child(
-                        template(row.data())
-                    ).show();
-                    tr.addClass('shown');
-                }
-            });
-        }
-
-        //    function test() {
-        //        alert('oke');
-        //    }
-
-        {{--function toogleImg() {--}}
-        {{--var img1 = "{{asset('images/details_open.png')}}",--}}
-        {{--img2 = "{{asset('images/details_close.png')}}";--}}
-        {{--var imgElement = document.getElementById('test1');--}}
-
-        {{--imgElement.src = (imgElement.src === img1)? img2 : img1;--}}
-        {{--}--}}
-    </script>
+    <script src="{{ asset('js/Master/siswa.js') }}"></script>
 
 
 @endsection

@@ -42,7 +42,7 @@ Route::prefix('kelas')->group(function (){
 
 Route::prefix('siswa')->group(function (){
     Route::get('/','Master\siswaControl@index')->name('dataSiswa');
-    Route::get('/dataSiswa','Master\siswaControl@getData')->name('getDataSiswa');
+    Route::get('/dataSiswa','Master\siswaControl@getData');
     Route::get('/dataKelas','Master\siswaControl@getDataKelas')->name('getListKelas');
     Route::post('/simpanDataSiswa','Master\siswaControl@insert')->name('insertDataSiswa');
     Route::get('/siswabaru','Master\siswaControl@siswaBaru')->name('siswaBaru');
