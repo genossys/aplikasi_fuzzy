@@ -18,7 +18,6 @@
     <!-- bootstrap datepicker -->
     <script src="{{ asset('/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
 
-    //script datepicker
     <script>
         $(function () {
             //Initialize Select2 Elements
@@ -36,7 +35,8 @@
 
             //Date picker
             $('#datepicker').datepicker({
-                autoclose: true
+                autoclose: true,
+                format: 'yyyy-mm-dd'
             })
 
         })
@@ -77,6 +77,7 @@
             });
         });
     </script>
+    <script src="{{ asset('js/Master/tambahSiswa.js') }}"></script>
 @endsection
 
 @section('content')
@@ -107,6 +108,8 @@
                 </div>
             </div>
             <div class="box-body">
+            <div class="alert alert-danger" style="display:none"></div>
+            <div class="alert alert-success" style="display:none">oke</div>
 
                 <form method="POST" action="{{ route('insertDataSiswa') }}"  id="formtambahsiswa">
                     {{ csrf_field() }}
@@ -148,7 +151,7 @@
                                         <i class="fa fa-calendar"></i>
                                     </div>
                                     <input type="text" class="form-control pull-right" id="datepicker"
-                                           name="lahirSiswa">
+                                           name="txtTanggalLahir">
                                 </div>
                             </div>
                         </div>
@@ -159,7 +162,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Alamat</label>
-                                <textarea class="form-control" rows="3" name="txtAlamatSiswa" id="txtAlamatSiswa"
+                                <textarea class="form-control" rows="3" name="txtAlamat" id="txtAlamat"
                                           placeholder="Enter ..."></textarea>
                             </div>
                         </div>
@@ -169,7 +172,7 @@
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label>Kelas</label>
-                                <select class="form-control" name="kelasSiswa" id="cmbKelas">
+                                <select class="form-control" name="cmbKelas" id="cmbKelas">
                                 </select>
                             </div>
                         </div>
@@ -199,15 +202,23 @@
                                         {{--<span class="input-group-btn">--}}
                                             {{--<button class="btn btn-default btn-choose" type="button">Pilih</button>--}}
                                         {{--</span>--}}
-                                        {{--<input type="file" class="form-control" name="txtFotoSiswa" id="txtFotoSiswa"--}}
+                                        {{--<input type="text" class="form-control" name="txtFoto" id="txtFoto"--}}
                                                {{--placeholder='Pilih Foto Siswa'/>--}}
                                         {{--<span class="input-group-btn">--}}
                                              {{--<button class="btn btn-warning btn-reset" type="button">Reset</button>--}}
                                         {{--</span>--}}
                                     {{--</div>--}}
-
+                                    {{--<div class="input-group-prepend">--}}
+                                        {{--<span class="input-group-text" id="inputGroupFileAddon01">Upload</span>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="custom-file">--}}
+                                        {{--<input type="file" class="custom-file-input" id="inputGroupFile01"--}}
+                                               {{--aria-describedby="inputGroupFileAddon01">--}}
+                                        {{--<label class="custom-file-label" for="inputGroupFile01">Choose file</label>--}}
+                                    {{--</div>--}}
+                                    <input type="file" class="custom-file-input" name="txtFoto" id="txtFoto" accept="image/*">
                                 </div>
-                                <input type="file" name="txtFoto" id="txtFoto" accept=".jpg, .jpeg, .png">
+
                             </div>
                         </div>
                     </div>

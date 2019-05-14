@@ -35,19 +35,26 @@ class siswaControl extends Controller
     public function getData()
     {
         $datasiswa = siswa::query()
-            ->select('nis', 'namaSiswa', 'jenisKelamin', 'tanggalLahir', 'alamat', 'idKelas', 'namaOrtu')
+            ->select('nis', 'namaSiswa', 'jenisKelamin', 'tanggalLahir', 'alamat', 'idKelas', 'namaOrtu', 'foto', 'noHp')
             ->orderBy('nis', 'ASC')
             ->get();
         return DataTables::of($datasiswa)
             ->addColumn('action', function () {
                 return '<a class="btn-sm btn-warning" href="#" id="btn-edit"> <i class="fa fa-edit"></i> <a/> 
-                        <a class="btn-sm btn-danger" href="#" id="btn-delete" style="margin-left: 5px"><i class="fa fa-trash"></i></a>';
+                        <a class="btn-sm btn-danger" href="#" id="btn-delete" style="margin-left: 5px"><i class="fa fa-trash"></i></a>
+                        <a class="btn-sm btn-danger details-control" href="#" id="btn-detail"><i class="fa fa-folder-open"></i></a>';
             })
             ->editColumn('jenisKelamin', function ($datasiswa) {
                 if ($datasiswa->jenisKelamin == 'L') {
                     return 'Laki-Laki';
                 } else {
                     return 'Perempuan';
+                }
+            })->editColumn('foto', function ($datasiswa){
+                if ($datasiswa->foto == ''){
+                    return 'default.png';
+                }else{
+                    return $datasiswa->foto;
                 }
             })
             ->addIndexColumn()
@@ -59,12 +66,17 @@ class siswaControl extends Controller
         $messages = [
             'required' => 'Field :attribute Tidak Boleh Kosong',
             'max' => 'Filed :attribute Maksimal :max',
+            'image' => 'File Bukan Gambar'
         ];
 
         $rules = [
-            'nis' => 'required|max:10',
-            'namaSiswa' => 'required|max:255',
-            'foto' => 'images|mimes:jpeg,png,jpg|max:2048'
+            'txtNis' => 'required|max:10',
+            'txtNamaSiswa' => 'required|max:255',
+            'cmbjenisKelamin' => 'required|',
+            'txtTanggalLahir' => 'required|',
+            'cmbKelas' => 'required|',
+            'txtNoHp' => 'required|',
+            'txtFoto' => 'required|image|mimes:jpeg,png,jpg|max:100'
 
         ];
 
@@ -74,56 +86,37 @@ class siswaControl extends Controller
     public function insert(Request $r)
     {
 
-//        request()->validate([
-//           'image' => 'required|image|mimes:jpg,jpeg,png|max:2048'
-//        ]);
+        if ($this->isValid($r)->fails()){
+            return response()->json([
+                'valid' => false,
+                'errors' => $this->isValid($r)->errors()->all()
+            ]);
+        }else{
+            if ($r->hasFile('txtFoto')){
+                    $nis = $r->txtNis;
+                    $upload = $r->file('txtFoto');
+                    $namafoto = $nis.'.'.$upload->getClientOriginalExtension();
+                    $r->txtFoto->move(public_path('images/fotosiswa'), $namafoto);
+                    $siswa = new siswa;
+                    $siswa->nis = $r->txtNis;
+                    $siswa->namaSiswa = $r->txtNamaSiswa;
+                    $siswa->jenisKelamin = $r->cmbjenisKelamin;
+                    $siswa->tanggalLahir = $r->txtTanggalLahir;
+                    $siswa->alamat = $r->txtAlamat;
+                    $siswa->idKelas = $r->cmbKelas;
+                    $siswa->namaOrtu = $r->txtOrtuSiswa;
+                    $siswa->foto = $namafoto;
+                    $siswa->noHp = $r->txtNoHp;
+                    $siswa->save();
+                return response()
+                    ->json([
+                        'valid' => true,
+                        'sukses' => $siswa,
+                        'url' => 'kelas/dataKelas'
+                    ]);
+                }
 
-//        $imagename = time().'.'.$r->image->getClientOriginalExtension();
-//            $imagename = time().'-'.$r->txtFoto->getClientOriginalName();
-//        $r->image->move(public_path('images'), $imagename);
-
-        return response()->json([
-//           'hasil' => $imagename,
-            'ar' => $r->txtNis
-        ]);
-//        if ($this->isValid($r)->fails()){
-//            return response()->json([
-//                'valid' => false,
-//                'errors' => $this->isValid($r)->errors()->all()
-//            ]);
-//        }else {
-//
-//            if ($r->hasFile('image')){
-//                $upload = $r->file('txtFotoSiswa');
-//                $name = $upload->getClientOriginalName().'.'.$upload->getClientOriginalExtension();
-//
-//            }else{
-//                return response()->json([
-//                    'hasil' => 'tidak ada gambar'
-//                ]);
-//            }
-        //            $siswa = new siswa;
-        //            $siswa->nis = $r->input('nis');
-        //            $siswa->namaSiswa = $r->input('namaSiswa');
-        //            $siswa->jenisKelamin = $r->input('jenisKelamin');
-        //            $siswa->tanggalLahir = $r->input('tanggalLahir');
-        //            $siswa->alamat = $r->input('alamat');
-        //            $siswa->idKelas = $r->input('idKelas');
-        //            $siswa->namaOrtu = $r->input('namaOrtu');
-        //            $siswa->noHp = $r->input('noHp');
-
-
-        //$upload->move(public_path().'/images/', $name);
-        //$siswa->foto = public_path().'/images/'.$name;
-        //$siswa->save();
-
-//            return response()
-//                ->json([
-//                    'valid' => true,
-//                    'sukses' => $siswa,
-//                    'namafile' => $name
-//                ]);
-//        }
+        }
     }
 
 

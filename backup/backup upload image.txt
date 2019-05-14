@@ -1,0 +1,46 @@
+request()->validate([
+//           'image' => 'required|image|mimes:jpg,jpeg,png|max:2048'
+//        ]);
+
+//          $file = $r->file('txtFoto');
+//          $imagename = time().'.'.$file->getClientOriginalExtension();
+//            $imagename = time().'-'.$r->txtFoto->getClientOriginalName();
+
+//        if ($this->isValid($r)->fails()){
+//            return response()->json([
+//                'valid' => false,
+//                'errors' => $this->isValid($r)->errors()->all()
+//            ]);
+//        }else {
+//
+//            if ($r->hasFile('image')){
+//                $upload = $r->file('txtFotoSiswa');
+//                $name = $upload->getClientOriginalName().'.'.$upload->getClientOriginalExtension();
+//
+//            }else{
+//                return response()->json([
+//                    'hasil' => 'tidak ada gambar'
+//                ]);
+//            }
+        //            $siswa = new siswa;
+        //            $siswa->nis = $r->input('nis');
+        //            $siswa->namaSiswa = $r->input('namaSiswa');
+        //            $siswa->jenisKelamin = $r->input('jenisKelamin');
+        //            $siswa->tanggalLahir = $r->input('tanggalLahir');
+        //            $siswa->alamat = $r->input('alamat');
+        //            $siswa->idKelas = $r->input('idKelas');
+        //            $siswa->namaOrtu = $r->input('namaOrtu');
+        //            $siswa->noHp = $r->input('noHp');
+
+
+        //$upload->move(public_path().'/images/', $name);
+        //$siswa->foto = public_path().'/images/'.$name;
+        //$siswa->save();
+
+//            return response()
+//                ->json([
+//                    'valid' => true,
+//                    'sukses' => $siswa,
+//                    'namafile' => $name
+//                ]);
+//        }

@@ -80,8 +80,7 @@ $('#formEditKelas').on('submit', function (e) {
         success: function (response) {
             console.log(response);
             if (response.valid) {
-                clearEdit();
-                alertSukses.show().html('<p> Berhasil merubah Data ' + $('#txtOldIdKelas').val() + ' Menjadi ' + response.sukses.idKelas + '  </p>');
+                $('#modaleditkelas').modal('hide');
                 table.draw();
             } else {
                 alertDanger.hide();

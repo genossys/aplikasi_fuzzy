@@ -211,7 +211,7 @@
 
 <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('js/dataTablesBootstrap4.js') }}"></script>
-<script src="{{ asset('js/handlebars.js') }}"></script>
+
 
 <script>
     $(document).ready(function () {
