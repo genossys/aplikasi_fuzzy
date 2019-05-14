@@ -81,20 +81,12 @@
 @endsection
 
 @section('content')
-
-
-    <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>
-            Tambah Siswa
-        </h1>
-
+        <h1>Tambah Siswa</h1>
     </section>
 
     <!-- Main content -->
     <section class="content">
-
-
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
@@ -109,7 +101,7 @@
             </div>
             <div class="box-body">
             <div class="alert alert-danger" style="display:none"></div>
-            <div class="alert alert-success" style="display:none">oke</div>
+            <div class="alert alert-success" style="display:none"></div>
 
                 <form method="POST" action="{{ route('insertDataSiswa') }}"  id="formtambahsiswa">
                     {{ csrf_field() }}

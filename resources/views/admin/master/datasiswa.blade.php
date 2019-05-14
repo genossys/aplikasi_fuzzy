@@ -62,9 +62,6 @@
         <!-- /.box -->
     </section>
     <!-- /.content -->
-
-    <div></div>
-
 @endsection
 
 @section('script')
@@ -75,6 +72,7 @@
                 <img src="images/fotosiswa/{{ 'foto' }}" height="70" width="70">
             </div>
             <div id="detail" class="col-lg-10">
+                
                 <div class="table-responsive-lg">
                 <table class="table table-responsive">
                     <tr>

@@ -20,7 +20,7 @@ class siswaControl extends Controller
 
     public function siswaBaru()
     {
-        return view('/admin/master/tambahsiswa');
+        return view('/admin/master/tambahsiswa', ['tambah' => 'tambah']);
     }
 
     public function getDataKelas()
