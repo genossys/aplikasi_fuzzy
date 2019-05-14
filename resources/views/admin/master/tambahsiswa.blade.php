@@ -82,7 +82,13 @@
 
 @section('content')
     <section class="content-header">
-        <h1>Tambah Siswa</h1>
+        @if ($data->status == 'tambah')
+            <h1>Tambah Siswa</h1>
+        @else
+            <h1>Ubah Data Siswa {{$data->nis}}</h1>
+        @endif
+
+        
     </section>
 
     <!-- Main content -->

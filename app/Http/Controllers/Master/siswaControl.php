@@ -20,7 +20,16 @@ class siswaControl extends Controller
 
     public function siswaBaru()
     {
-        return view('/admin/master/tambahsiswa', ['tambah' => 'tambah']);
+        $datastatus = [
+            'status' => 'tambah'
+        ];
+        return view('/admin/master/tambahsiswa')->with('data', $datastatus);
+    }
+
+    public function storeSiswa($nis){
+        $datasiswa = siswa::find($nis);
+        $datastatus = array_add($datasiswa, 'status', 'edit');
+        return view('/admin/master/tambahsiswa')->with('data', $datastatus);
     }
 
     public function getDataKelas()
@@ -39,8 +48,8 @@ class siswaControl extends Controller
             ->orderBy('nis', 'ASC')
             ->get();
         return DataTables::of($datasiswa)
-            ->addColumn('action', function () {
-                return '<a class="btn-sm btn-warning" href="#" id="btn-edit"> <i class="fa fa-edit"></i> <a/> 
+            ->addColumn('action', function ($datasiswa) {
+                return '<a class="btn-sm btn-warning" href="siswa/storesiswa/0001" id="btn-edit"> <i class="fa fa-edit"></i> <a/> 
                         <a class="btn-sm btn-danger" href="#" id="btn-delete" style="margin-left: 5px"><i class="fa fa-trash"></i></a>
                         <a class="btn-sm btn-danger details-control" href="#" id="btn-detail"><i class="fa fa-folder-open"></i></a>';
             })

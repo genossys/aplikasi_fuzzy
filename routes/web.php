@@ -46,6 +46,7 @@ Route::prefix('siswa')->group(function (){
     Route::get('/dataKelas','Master\siswaControl@getDataKelas')->name('getListKelas');
     Route::post('/simpanDataSiswa','Master\siswaControl@insert')->name('insertDataSiswa');
     Route::get('/siswabaru','Master\siswaControl@siswaBaru')->name('siswaBaru');
+    Route::get('/storesiswa/{nis}', 'Master\siswaControl@storeSiswa');
 });
 
 
