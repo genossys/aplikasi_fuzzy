@@ -21,9 +21,10 @@
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                             title="Collapse">
                         <i class="fa fa-minus"></i></button>
-
+                    
                 </div>
             </div>
+            <div></div>
             <div class="box-body">
                 <div class="table-responsive-lg">
                     <table id="example2" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -63,7 +64,7 @@
     </section>
     <!-- /.content -->
 
-
+    <div></div>
 
 @endsection
 
