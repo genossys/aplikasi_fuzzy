@@ -139,7 +139,6 @@ function clearSave() {
     $('#txtNamaKelas').val('');
     alertDanger.hide();
     alertSukses.hide();
-    alertSukses.hide();
 }
 
 function clearEdit() {

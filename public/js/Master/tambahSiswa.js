@@ -12,11 +12,25 @@ $('#formtambahsiswa').on('submit', function (event) {
         contentType: false,
         cache: false,
         processData: false,
-        success:function(data)
+        success:function(response)
         {
-            console.log(data);
+            if (response.valid) {
+                console.log(response);
+                clearSimpanSiswa();
+                alertSukses.show().html('<p> Berhasil Menambahkan Data ' + response.sukses.nis + '</p>');
+            }else{
+                alertDanger.hide();
+                alertSukses.hide();
+                $.each(response.errors, function (key, value) {
+                    alertDanger.show().append('<p>' + value + '</p>');
+                });
+            }
+            
+        },
+        error: function (respoxhr, textStatus, errorThrownnse) {
+            alert(errorThrown + xhr + textStatus);
         }
-    })
+    });
 });
 
 $.get('/siswa/dataKelas', function (data) {
@@ -29,4 +43,14 @@ $.get('/siswa/dataKelas', function (data) {
 
 function clearSimpanSiswa() {
     
+    $('#txtNis').val('');
+    $('#txtNamaSiswa').val('');
+    $('#datepicker').val('');
+    $('#txtAlamat').val('');
+    $('#txtOrtuSiswa').val('');
+    $('#txtNoHp').val('');
+    $('#txtFoto').val('');
+    alertDanger.hide();
+    alertSukses.hide();
+
 }
